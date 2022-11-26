@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,300;1,400;1,500&display=swap');
+
+/* para tiutlo inportantes*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+#contairner_principal{
+    /*background-color: rgb(95, 215, 209);*/
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    /*grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);*/
+
+    grid-template-areas:
+    'header header header '
+    'main main main '
+    'main main main '
+    'main main main '
+    'pie pie pie';
+    
+
+}
+
+/* cabecera */
+#cabecera_principal {
+    /*grid-column: 1 /4;
+    grid-row: 1 / 2;*/
+    background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
+    /*background:linear-gradient(90deg, rgba(196,196,198,1) 0%, rgba(223,223,223,1) 35%, rgba(255,255,255,1) 100%);*/
+    grid-area: header;
+
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-between;
+}
+
+.logotipo_principal {
+    /*background-color: yellowgreen;*/
+    width: 21%;
+/*    height: 120px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-end;
+}
+
+.logo {
+    /*width: 150px;
+    height: 150px;*/
+    /*border: 3px solid #333;*/
+    padding: 1em 2em;
+}
+
+.logo img {
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+}
+
+.logo_img {
+    object-fit: cover;
+}
+
+.redes_sociales{
+    width: 150px;
+    height: 50px;
+    /*border: 3px solid rgb(205, 45, 45);*/
+}
+
+.redes_sociales ul{
+   /*background-color: purple;*/
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes_sociales ul li {
+    list-style: none;
+    
+}
+
+.redes_sociales ul li a{
+    display:inline-block ;
+    /*background-color: rgb(31, 30, 30);*/
+    text-decoration: none;
+}
+
+.menu_principal{
+    width: 50%;
+    height: 3em;
+    margin:auto 0;
+    /*border: 3px solid aqua;*/
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+
+}
+
+
+
+.menu_principal  li {
+    /*background-color: #fff;*/
+    padding: 8px;
+    margin-left: 20px;
+    /*border-radius: 50%;*/
+}
+.menu_principal  li:last-child{
+    margin-right: 20px;
+}
+.menu_principal  li:hover{
+    border-bottom: 2px solid #47b4fd;
+}
+
+.menu_principal  li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+}
+
+
+
+/*fin de parte cabecera*/
+
+/*inicio del main*/
+hr{
+    border: 0; height: 0; box-shadow: 0 1px 5px 1px purple;
+}
+
+#container_main {
+    /*grid-column: 1 /4;
+    grid-row: 2/ 7; */
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: -1px -30px 22px -15px rgba(203,0,143,0.48);
+    -moz-box-shadow: -1px -30px 22px -15px rgba(203,0,143,0.48);
+    box-shadow: -1px -30px 22px -15px rgba(203,0,143,0.48);
+
+    grid-area: main;
+}
+
+.primera_parte{
+    
+}
+
+.precentacion {
+    width: 100%;
+    padding-top: 10px;
+    background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
+
+    display: flex;
+} 
+
+.precentacion_slogan {
+    width: 60%;
+    display: flex;
+    border: 2px solid black;
+    position: relative;
+
+}
+
+.precentacion_slogan img {
+    width: 40%;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid red;
+}
+
+.precentacion_slogan div{
+    border: 2px solid yellow;
+    width: 70%;
+    height: 250px;
+    position: absolute;
+    top: 180px;
+    right: 0px;
+    margin: auto 0;
+}
+
+.precentacion_slogan div span {
+    font-size: 4em;
+    color: #47b4fd;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    
+
+}
+
+.precentacion_slogan div h2{
+
+}
+
+.precentacion_logotipo{
+    width: 40%;
+}
+
+
+/* fin del main */
+
+/* inicio de pie*/
+#pie {
+   /* grid-column: 1 / 4;
+    grid-row: 7 / 8;*/
+    background-color: rgb(211, 43, 71);
+    grid-area: pie;
+    display:flex;
+    flex-direction: column;
+}
+
+/* fin del pie */
