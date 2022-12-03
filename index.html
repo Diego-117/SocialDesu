@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./img/logoDesu1.ico">
     <title>Home</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
     <header id="cabecera_principal" >
         <div class="logotipo_principal">
             <div class="logo">
-                <img class="logo_img" src="./img/logoDesu1.png" alt="logotipo de SocialDesu">
+                <a href="index.html"><img class="logo_img" src="./img/logoDesu1.png" alt="logotipo de SocialDesu"></a>
             </div>
             <div class="redes_sociales">
                 <!--icon red social proximamente jeje-->
@@ -28,6 +29,7 @@
         <ul class="menu_principal">
             <li><a href="./Registrar.html">Registrate</a></li>
             <li><a href="./IniciarSesion.html">Iniciar sesion</a></li>
+            <li><a href="./Tienda.html">Tienda Desu</a></li>
             <li><a href="#nosotros">Quienes somos</a></li>
             <li><a href="./Descargas.html">Descargas</a></li>
         </ul>
@@ -38,7 +40,7 @@
     <main id="container_main">
         <hr>
         <section class="primera_parte">
-            <section class="precentacion">
+            <div class="precentacion">
                 <div class="precentacion_slogan">
                     <img src="./img/espada.png" alt="imagen de espada de precentacion">
                     <div>
@@ -49,50 +51,70 @@
     
                 <div class="precentacion_logotipo">
                         <img src="./img/logoDesu2.png" alt="logo de SocialDesu">
-                        <img src="./img/piedelogo.PNG" alt="imagen pie de logo">
                 </div>
-            </section>
+            </div>
 
-            <section class="plan_compra">
+            <div class="plan_compra">
                 <div>
                     <span>Plan
                         Streemer
-                        Desu</span>
+                        Desu
+                    </span>
+                    <p>plan para generadores de contenido en la plataforma, con beneficios unicos para ellos</p>
                         <a href="#">Mas informacion...</a>
                 </div>
                 <div>
                     <span>Plan Fan
-                        Desu</span>
+                        Desu
+                    </span>
+                    <p>plan para generadores de contenido en la plataforma, con beneficios unicos para ellos</p>
                         <a href="#">Mas informacion...</a>
                 </div>
                 <div>
                     <span>Plan lector
                         Desu
                         </span>
+                        <p>plan para generadores de contenido en la plataforma, con beneficios unicos para ellos</p>
                         <a href="#">Mas informacion...</a>
                 </div>
-            </section>
+            </div>
             
         </section>
 
         <section class="segunda_parte">
             <div class="colaboradores">
-                <p>
+                <div class="titulo_C">
                     <h2>Streemers  Colaboradores</h2>
                     <span>¡ Estos son algunos de nuestros
                         streemers colaboradores, conocelos a
                         cada uno de ellos!</span>
-                </p>
-                <div>
-                    <img src="./img/streemer.PNG" alt="imagen de streemer1">
                 </div>
-    
-                <div>
-                    <img src="./img/streemer.PNG" alt="imagen de streemer2">
-                </div>
-    
-                <div>
-                    <img src="/img/streemer.PNG" alt="imagen de streemer3">
+                
+                <div class="colaboradores_targetas">
+                    <div class="streem">
+                        <button class="seguir" type="button">seguir</button>
+                        <img src="./img/streemer.PNG" alt="imagen de streemer1">
+                        <p>descripcion del streemer donde se pondra un breve resumen de quien es y su ranking de 
+                            popularidad </p>
+                        <p>600k | seguidores</p>
+                        <p>Temas | reacciones | juegos | creativo </p>
+                    </div>
+        
+                    <div class="streem">
+                        <button class="seguir" type="button">seguir</button>
+                        <img src="./img/streemer.PNG" alt="imagen de streemer2">
+                        <p>descripcion del streemer donde se pondra un breve resumen de quien es y su ranking de popularidad</p>
+                        <p>600k | seguidores</p>
+                        <p>Temas | reacciones | juegos | creativo </p>
+                    </div>
+        
+                    <div class="streem">
+                        <button class="seguir" type="button">seguir</button>
+                        <img src="./img/streemer.PNG" alt="imagen de streemer3">
+                        <p>descripcion del streemer donde se pondra un breve resumen de quien es y su ranking de popularidad</p>
+                        <p>600k | seguidores</p>
+                        <p>Temas | reacciones | juegos | creativo </p>  
+                    </div>
                 </div>
             </div>
 
@@ -101,23 +123,27 @@
                     <p id="nosotros">Conoce mas de nosotros</p>
                     <h3>SocialDesu</h3>
                 </div>
+                <div class="nosotros_p">
+                    <div>
+                        <!--<video src="#"></video> cuando tengamos el video en servidor y sea propio-->
+                        <p class="titulo_n">Mision</p>
+                        <iframe  src="https://www.youtube.com/embed/xcJtL7QggTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p><a href="#">Conoce mas...</a></p>
+                    </div>
 
-                <div>
-                    <!--<video src="#"></video> cuando tengamos el video en servidor y sea propio-->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xcJtL7QggTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p><a href="#"></a></p>
-                </div>
+                        <div>
+                            <!--<video src="#"></video>-->
+                            <p class="titulo_n">Vision</p>
+                            <iframe  src="https://www.youtube.com/embed/xcJtL7QggTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p><a href="#">Conoce mas...</a></p>
+                        </div>
 
                     <div>
                         <!--<video src="#"></video>-->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/xcJtL7QggTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <p><a href="#"></a></p>
+                        <p class="titulo_n">Meta</p>
+                        <iframe  src="https://www.youtube.com/embed/xcJtL7QggTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p><a href="#">Conoce mas...</a></p>
                     </div>
-
-                <div>
-                    <!--<video src="#"></video>-->
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xcJtL7QggTI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p><a href="#"></a></p>
                 </div>
             </div>
         </section>
@@ -127,53 +153,57 @@
                 <h2>Contactanos mandando tu mensaje</h2>
                 <span>Social Desu</span>
             </div>
-            <form action="#" class="correo_formulario">
-                <div>
-                    <label for="nombre">Nombre</label> 
-                    <input type="text" id="nombre" name="nombre">
+            <div class="form_c">
+                <div class="logo_form">
+                    <img src="./img/Logo Sencillo Neón para Bar.gif" alt="logo formulario">
                 </div>
-
-                <div>
-                    <label for="email">Email</label> 
-                    <input type="email" id="email" name="email">
-                </div>          
-                    <br> 
-                <div>
-                    <p>Tipo de reporte sobre servicio</p>
+                
+                <form action="#" class="correo_formulario">
                     <div>
-                        <label for="Reporte1"> Reporte</label>
-                    <input type="checkbox" id="Reporte1" name="Reporte1" value="REP">
+                        <label for="nombre">Nombre</label> 
+                        <input type="text" id="nombre" class="dato_parrafo" name="nombre">
                     </div>
-
+    
                     <div>
-                        <label for="Opinion"> Opinion</label>
-                        <input type="checkbox" id="Opinion" name="Opinion" value="OP">
-                    </div> 
-                    
-                </div>
-
-                <div>
-                    <label for="pais">Selecciona tu pais:</label>
-                    <select name="pais" id="pais">
-                        <option value="mx">Mexico</option>
-                        <option value="us">United States</option>
-                        <option value="pr">Peru</option>
-                        <option value="jp">Japon</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="mensaje">Escriba su mensaje</label>
-                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escriba su mensaje">
-
-                    </textarea>
-                </div>
-
-                <div>
-                    <input type="submit" value="Enviar mensaje">
-                </div>
-
-            </form>
+                        <label for="email">Email</label> 
+                        <input type="email" id="email" class="dato_parrafo" name="email">
+                    </div>          
+                       <!--<br>  -->
+                    <div class="tipo_Repo">
+                        <p>Tipo de reporte sobre servicio</p>
+                        <div class="check">
+                            <label for="Reporte1"> Reporte</label>
+                        <input type="checkbox" id="Reporte1"  name="Reporte1" value="REP">
+                        </div>
+    
+                        <div class="check">
+                            <label for="Opinion"> Opinion</label>
+                            <input type="checkbox" id="Opinion"  name="Opinion" value="OP">
+                        </div> 
+                        
+                    </div>
+    
+                    <div>
+                        <label for="pais">Selecciona tu pais:</label>
+                        <select name="pais" id="pais">
+                            <option value="mx">Mexico</option>
+                            <option value="us">United States</option>
+                            <option value="pr">Peru</option>
+                            <option value="jp">Japon</option>
+                        </select>
+                    </div>
+    
+                    <div class="mensaje_form">
+                        <textarea name="mensaje" id="mensaje" class="textbox" cols="30" rows="10" placeholder="Escriba su mensaje">
+                        </textarea>
+                    </div>
+    
+                    <div class="enviar">
+                        <input type="submit"  value="Enviar mensaje">
+                    </div>
+    
+                </form>
+            </div>
         </section>
 
     </main>
@@ -209,7 +239,7 @@
             COPYRIGHT © 2022 | 2022 MILFORMATOS BY SOCIALDESU | ALL RIGHTS RESERVED
         </P>
     </div>
-  </footer>
+    </footer>
 </div>
 </body>
 </html>
