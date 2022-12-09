@@ -1,0 +1,38 @@
+/* 
+    * modelado responsivo 
+*/
+
+/* las media query deben de llevar un orden para ser aplicado el diseño responsivo colocando primero 
+las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
+
+/* dispositivos grandes como pc y tv */
+
+@media only screen and (max-width: 1200px) {
+    *{
+        background: rgb(214, 199, 31) ;
+    }
+}
+
+/* small screen y laptops  */
+
+@media only screen and (max-width: 1024px) {
+    *{
+        background: rgb(19, 175, 29) ;
+    }
+}
+
+/* Medidas para ipad y tablets */
+
+@media only screen and (max-width: 768px) {
+    *{
+        background: rgb(186, 10, 39) ;
+    }
+}
+
+/* medidas para dispositivos pequeños como celulares  y celulares antiguos */
+
+@media only screen and (max-width: 480px) {
+    *{
+        background: rgb(181, 78, 95) ;
+    }
+}

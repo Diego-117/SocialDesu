@@ -1,0 +1,116 @@
+.main_tienda{
+    width: 100%;
+    padding: 10px;
+
+    .buscador{
+        width: 50%;
+        min-height: 200px;
+        margin: 50px auto;
+        border: 3px solid #333;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .buscador_form{
+            border: 2px solid red;
+            display: flex;
+
+            .carrito{
+                display: flex;
+                align-items: center;
+                margin: 0 5px;
+
+                img{
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .tienda_contenido{
+        margin-bottom: 100px;
+        display: flex;
+
+        aside{
+            width: 20%;
+            background: coral;
+        
+            margin-right: 5rem;
+        }
+
+        #galeria{
+            width: 70%;
+            padding: 5px;
+        
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+            gap: 20px;
+            /*grid-template-rows: repeat(10, 1fr);*/
+
+            .galeria_articulo{
+                position: relative;
+                border: 1px solid rgb(222, 221, 221);  
+                overflow:hidden;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                div{
+                    background-image: linear-gradient(to right, #ffffff, #dad8f7, #afb4f0, #7a93e9, #0f75e2);
+                    width: 100%;
+                    color: rgb(0, 0, 0);
+                    padding: 5px;
+                
+                    display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+                    p{
+                        margin-right: 5px;
+                        font-weight: 600;
+                        margin:auto 5px;
+                    }
+
+                    button{
+                        padding: 3px 4px;
+                        margin-right: 5px;
+                        cursor: pointer;
+
+                        &:active{
+                            background-color:#0f75e2 ;
+                            color: #ffffff;
+                        }
+                    }
+                }
+
+                .nom_prod {
+                    width: 5em;
+                    font-weight: 600;
+                    background-image: linear-gradient(to right, #ffffff, #dad8f7, #afb4f0, #7a93e9, #0f75e2);
+                    padding: 5px;
+                    border-radius: 10%;
+                
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                }
+
+                &:hover {
+                    -webkit-transform:scale(1.2);
+                    transform:scale(1.2);
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

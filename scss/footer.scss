@@ -1,0 +1,30 @@
+#pie {
+    /*background-color: rgb(211, 43, 71);*/
+    @include contenedorPrimario(rgb(211, 43, 71));
+    grid-area: pie;
+    display:flex;
+    flex-direction: column;
+
+
+    .pie_datos{
+        display: flex;
+        justify-content: space-between;
+
+        .ubicacion{
+            padding: 10px;
+        }
+    
+        .ubicacion iframe{
+            width: 400px;
+            height: 400px;
+            border: 0;
+        }
+    }
+
+    .copy{
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
