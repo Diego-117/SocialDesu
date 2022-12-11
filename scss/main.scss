@@ -1,6 +1,4 @@
-hr{
-    border: 0; height: 0; box-shadow: 0 1px 5px 1px purple;
-}
+
 
 #container_main {
     /*width: 100%;*/
@@ -11,6 +9,13 @@ hr{
     box-shadow: -1px -30px 22px -15px rgba(203,0,143,0.48);
 
     grid-area: main;
+
+    hr{
+        border: 0; 
+        height: 0;
+        box-shadow: 0 1px 5px 1px purple;
+        margin: 0;
+    }
 
 
     .primera_parte{
@@ -131,6 +136,14 @@ hr{
                         border-radius: 6%;
                     }
                 }
+            }
+        }
+
+        .slide{
+            display: none;
+
+            .d-block{
+                
             }
         }
     }

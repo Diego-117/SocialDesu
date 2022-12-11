@@ -8,9 +8,10 @@
   box-sizing: border-box; }
 
 #contairner_principal {
+  /*width: 100%;*/
   font-family: 'Montserrat', sans-serif;
   display: grid;
-  grid-template-areas: 'header header header ' 'main main main ' 'main main main ' 'main main main ' 'pie pie pie'; }
+  grid-template-areas: 'header header header' 'main main main' 'main main main' 'main main main' 'pie pie pie'; }
 
 #cabecera_principal {
   background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
@@ -67,11 +68,8 @@
         text-align: center; }
       #cabecera_principal .menu_principal li:last-child {
         margin-right: 20px; }
-
-hr {
-  border: 0;
-  height: 0;
-  box-shadow: 0 1px 5px 1px purple; }
+  #cabecera_principal .navbar {
+    display: none; }
 
 #container_main {
   /*width: 100%;*/
@@ -84,6 +82,11 @@ hr {
   -moz-box-shadow: -1px -30px 22px -15px rgba(203, 0, 143, 0.48);
   box-shadow: -1px -30px 22px -15px rgba(203, 0, 143, 0.48);
   grid-area: main; }
+  #container_main hr {
+    border: 0;
+    height: 0;
+    box-shadow: 0 1px 5px 1px purple;
+    margin: 0; }
   #container_main .primera_parte .precentacion {
     width: 100%;
     padding-top: 10px;
@@ -157,6 +160,8 @@ hr {
           padding: 20px;
           background: white;
           border-radius: 6%; }
+  #container_main .primera_parte .slide {
+    display: none; }
   #container_main .segunda_parte .colaboradores {
     margin-bottom: 50px; }
     #container_main .segunda_parte .colaboradores .titulo_C {
@@ -399,24 +404,103 @@ hr {
 /* las media query deben de llevar un orden para ser aplicado el diseño responsivo colocando primero 
 las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
 /* dispositivos grandes como pc y tv */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
   * {
-    background: #d6c71f; } }
+    /*background-color: aqua;*/ }
+  #cabecera_principal .menu_principal {
+    width: 70%; }
+    #cabecera_principal .menu_principal li a {
+      font-size: 1em; }
+  #container_main {
+    max-width: 100%; }
+    #container_main .primera_parte .precentacion {
+      max-width: 100%; }
+      #container_main .primera_parte .precentacion .precentacion_slogan div {
+        width: 65%; }
+      #container_main .primera_parte .precentacion .precentacion_logotipo img {
+        max-width: 100%; }
+    #container_main .correo .form_c {
+      /* contenedor formulario principal sin titulo  */ }
+      #container_main .correo .form_c .logo_form img {
+        max-width: 100%;
+        object-fit: cover; }
+  /*termino de media query*/ }
 
-/* small screen y laptops  */
+/* small screen y laptops */
 @media only screen and (max-width: 1024px) {
   * {
-    background: #13af1d; } }
+    /*background: rgb(19, 175, 29) ;*/ }
+  #container_main .primera_parte .plan_compra {
+    max-width: 95%; }
+    #container_main .primera_parte .plan_compra div {
+      width: 300px; } }
 
 /* Medidas para ipad y tablets */
 @media only screen and (max-width: 768px) {
   * {
-    background: #ba0a27; } }
+    /*background: rgb(186, 10, 39) ;*/ }
+  #container_main .primera_parte .plan_compra {
+    max-width: 100%;
+    flex-wrap: wrap; }
+    #container_main .primera_parte .plan_compra div {
+      width: 350px; }
+  #container_main .correo .form_c {
+    /* contenedor formulario principal sin titulo  */
+    width: 80%; } }
 
 /* medidas para dispositivos pequeños como celulares  y celulares antiguos */
 @media only screen and (max-width: 480px) {
   * {
-    background: #b54e5f; } }
+    /* background: rgb(181, 78, 95) ;*/ }
+  #cabecera_principal .logotipo_principal {
+    display: none; }
+  #cabecera_principal .menu_principal {
+    display: none; }
+  #cabecera_principal .navbar {
+    background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
+    display: flex;
+    width: 100%;
+    min-height: 150px; }
+    #cabecera_principal .navbar .container-fluid a img {
+      width: 7em;
+      height: 7em;
+      border-radius: 50%; }
+    #cabecera_principal .navbar .container-fluid .navbar-toggler {
+      background-color: white;
+      padding: 20px; }
+      #cabecera_principal .navbar .container-fluid .navbar-toggler .navbar-toggler-icon {
+        background-color: white; }
+    #cabecera_principal .navbar .container-fluid .collapse {
+      margin-top: 20px; }
+      #cabecera_principal .navbar .container-fluid .collapse ul li {
+        border-bottom: 1px solid #b4b2b2;
+        cursor: pointer; }
+        #cabecera_principal .navbar .container-fluid .collapse ul li a {
+          font-size: 1.5rem;
+          color: white; }
+          #cabecera_principal .navbar .container-fluid .collapse ul li a:hover {
+            background-color: #e8dcdc; }
+  #container_main .primera_parte .precentacion .precentacion_slogan {
+    width: 100%; }
+    #container_main .primera_parte .precentacion .precentacion_slogan img {
+      width: 35%; }
+    #container_main .primera_parte .precentacion .precentacion_slogan div {
+      /*top: 180px;*/
+      right: 80px; }
+  #container_main .primera_parte .precentacion .precentacion_logotipo {
+    display: none; }
+  #container_main .primera_parte .plan_compra {
+    display: none; }
+  #container_main .primera_parte .slide {
+    display: block;
+    background-color: #666666;
+    /*border: 5px solid #333;*/
+    margin: 40px 0; }
+    #container_main .primera_parte .slide .carousel-inner .carousel-item img {
+      max-height: 500px; }
+  #container_main .correo .form_c {
+    /* contenedor formulario principal sin titulo  */
+    width: 95%; } }
 
 /* para iniciar los estilos poner en ventana de comandos node: npm run watch-css 
 este comando d acuerdo al script que ingresamos en el package.json
