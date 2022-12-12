@@ -183,8 +183,9 @@
         position: relative;
         display: flex; }
         #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .seguir {
-          width: 50px;
-          height: 25px;
+          /*width: 50px;
+                        height: 25px;*/
+          padding: 5px;
           position: absolute;
           top: 250px;
           left: 300px;
@@ -319,7 +320,8 @@
 
 .main_tienda {
   width: 100%;
-  padding: 10px; }
+  padding: 10px;
+  grid-area: main; }
   .main_tienda .buscador {
     width: 50%;
     min-height: 200px;
@@ -496,8 +498,16 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
     background-color: #666666;
     /*border: 5px solid #333;*/
     margin: 40px 0; }
+    #container_main .primera_parte .slide .carousel-inner .carousel-item .carousel-caption h5 {
+      /*color:rgb(255,255,255);
+                                font-size: 2rem;*/ }
+    #container_main .primera_parte .slide .carousel-inner .carousel-item .carousel-caption p {
+      /* color:rgb(255,255,255);
+                                font-size: 2rem;*/ }
     #container_main .primera_parte .slide .carousel-inner .carousel-item img {
       max-height: 500px; }
+    #container_main .primera_parte .slide button .carousel-control-prev-icon {
+      background-color: #555555; }
   #container_main .correo .form_c {
     /* contenedor formulario principal sin titulo  */
     width: 95%; } }

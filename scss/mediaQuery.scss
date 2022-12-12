@@ -452,9 +452,29 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
 
                     .carousel-item{
 
+                        .carousel-caption{
+
+                            h5{
+                                /*color:rgb(255,255,255);
+                                font-size: 2rem;*/
+                            }
+
+                            p{
+                               /* color:rgb(255,255,255);
+                                font-size: 2rem;*/
+                            }
+                        }
+
                         img{
                             max-height: 500px;
                         }
+                    }
+                }
+
+
+                button{
+                    .carousel-control-prev-icon{
+                        background-color: rgb(85, 85, 85);
                     }
                 }
             }
