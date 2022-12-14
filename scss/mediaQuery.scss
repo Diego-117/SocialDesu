@@ -328,6 +328,17 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
        /* background: rgb(181, 78, 95) ;*/
     }
 
+    #contairner_principal{
+        grid-template-areas:
+        'header '
+        'main'
+        'main'
+        'main'
+        'pie';
+        
+    
+    }
+
 
     #cabecera_principal {
 
@@ -479,6 +490,96 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
                 }
             }
 
+        }
+
+        .segunda_parte {
+
+            .colaboradores {
+                
+    
+                .titulo_C{
+                    
+    
+                    h2{
+                        
+                    }
+    
+                    .titulo_apartado{
+                        
+                    }
+                }
+    
+                .colaboradores_targetas{
+                    /*background-image: linear-gradient(to top, #222343, #2c3567, #31498e, #2d5eb7, #0f75e2);*/
+    
+                    .streem{
+                        width: 90%;
+                        min-height: 350px;
+                        
+                        .seguir{
+                            top: 260px;
+                            &:hover{
+                               
+                            }
+                        }
+                        
+                        img{
+                            
+                        }
+    
+                        .div_p{
+                            display: block;
+                            max-width: 30%;
+                            padding-top: 30px;
+                            p{
+        
+                                /* &:nth-last-child(3){
+                                    width: 35%;
+                                }*/
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .nosotros_principal{
+               
+    
+                div{
+    
+                    &:nth-last-child(2){
+                        
+                    }
+    
+                    #nosotros{
+                        
+                    }
+                }
+    
+                .nosotros_p{
+            
+    
+                    div{
+                        
+                        iframe{
+                            
+                        }
+    
+                        .titulo_n{
+                            
+                        }
+    
+                        p{
+    
+                            a{
+                                
+                            }
+                        }
+                    }
+                }
+    
+            }
+            
         }
 
         .correo{

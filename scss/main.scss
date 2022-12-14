@@ -207,16 +207,20 @@
                         margin: auto 20px;
                     }
 
-                    p{
-                        color: rgb(255, 255, 255);
-                        margin: auto 0;
-                        margin-right: 30px;
-                        font-weight: 600;
-
-                        &:nth-last-child(3){
-                            width: 35%;
+                    .div_p{
+                        min-width: 60%;
+                        display: flex;
+                        column-gap: 5px;
+                        padding-top: 10px;
+                        p{
+                           color: rgb(255, 255, 255); 
+    
+                           /* &:nth-last-child(3){
+                                width: 35%;
+                            }*/
                         }
                     }
+                    
                 }
             }
         }

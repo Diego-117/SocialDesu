@@ -202,13 +202,16 @@
           width: 250px;
           height: 250px;
           margin: auto 20px; }
-        #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem p {
-          color: white;
-          margin: auto 0;
-          margin-right: 30px;
-          font-weight: 600; }
-          #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem p:nth-last-child(3) {
-            width: 35%; }
+        #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .div_p {
+          min-width: 60%;
+          display: flex;
+          column-gap: 5px;
+          padding-top: 10px; }
+          #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .div_p p {
+            color: white;
+            /* &:nth-last-child(3){
+                                width: 35%;
+                            }*/ }
   #container_main .segunda_parte .nosotros_principal {
     width: 100%; }
     #container_main .segunda_parte .nosotros_principal div:nth-last-child(2) {
@@ -454,6 +457,8 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
 @media only screen and (max-width: 480px) {
   * {
     /* background: rgb(181, 78, 95) ;*/ }
+  #contairner_principal {
+    grid-template-areas: 'header ' 'main' 'main' 'main' 'pie'; }
   #cabecera_principal .logotipo_principal {
     display: none; }
   #cabecera_principal .menu_principal {
@@ -508,6 +513,21 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
       max-height: 500px; }
     #container_main .primera_parte .slide button .carousel-control-prev-icon {
       background-color: #555555; }
+  #container_main .segunda_parte .colaboradores .colaboradores_targetas {
+    /*background-image: linear-gradient(to top, #222343, #2c3567, #31498e, #2d5eb7, #0f75e2);*/ }
+    #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem {
+      width: 90%;
+      min-height: 350px; }
+      #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .seguir {
+        top: 260px; }
+      #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .div_p {
+        display: block;
+        max-width: 30%;
+        padding-top: 30px; }
+        #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .div_p p {
+          /* &:nth-last-child(3){
+                                    width: 35%;
+                                }*/ }
   #container_main .correo .form_c {
     /* contenedor formulario principal sin titulo  */
     width: 95%; } }
