@@ -7,6 +7,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  background-color: #f0f2f9; }
+
 #contairner_principal {
   /*width: 100%;*/
   font-family: 'Montserrat', sans-serif;
@@ -206,7 +209,7 @@
           min-width: 60%;
           display: flex;
           column-gap: 5px;
-          padding-top: 10px; }
+          padding-top: 5px; }
           #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .div_p p {
             color: white;
             /* &:nth-last-child(3){
@@ -458,79 +461,153 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
   * {
     /* background: rgb(181, 78, 95) ;*/ }
   #contairner_principal {
+    max-width: 100%;
     grid-template-areas: 'header ' 'main' 'main' 'main' 'pie'; }
-  #cabecera_principal .logotipo_principal {
-    display: none; }
-  #cabecera_principal .menu_principal {
-    display: none; }
-  #cabecera_principal .navbar {
-    background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
-    display: flex;
-    width: 100%;
-    min-height: 150px; }
-    #cabecera_principal .navbar .container-fluid a img {
-      width: 7em;
-      height: 7em;
-      border-radius: 50%; }
-    #cabecera_principal .navbar .container-fluid .navbar-toggler {
-      background-color: white;
-      padding: 20px; }
-      #cabecera_principal .navbar .container-fluid .navbar-toggler .navbar-toggler-icon {
-        background-color: white; }
-    #cabecera_principal .navbar .container-fluid .collapse {
-      margin-top: 20px; }
-      #cabecera_principal .navbar .container-fluid .collapse ul li {
-        border-bottom: 1px solid #b4b2b2;
-        cursor: pointer; }
-        #cabecera_principal .navbar .container-fluid .collapse ul li a {
-          font-size: 1.5rem;
-          color: white; }
-          #cabecera_principal .navbar .container-fluid .collapse ul li a:hover {
-            background-color: #e8dcdc; }
-  #container_main .primera_parte .precentacion .precentacion_slogan {
-    width: 100%; }
-    #container_main .primera_parte .precentacion .precentacion_slogan img {
-      width: 35%; }
-    #container_main .primera_parte .precentacion .precentacion_slogan div {
-      /*top: 180px;*/
-      right: 80px; }
-  #container_main .primera_parte .precentacion .precentacion_logotipo {
-    display: none; }
-  #container_main .primera_parte .plan_compra {
-    display: none; }
-  #container_main .primera_parte .slide {
-    display: block;
-    background-color: #666666;
-    /*border: 5px solid #333;*/
-    margin: 40px 0; }
-    #container_main .primera_parte .slide .carousel-inner .carousel-item .carousel-caption h5 {
-      /*color:rgb(255,255,255);
+  #cabecera_principal {
+    max-width: 480px;
+    display: block; }
+    #cabecera_principal .logotipo_principal {
+      display: none; }
+    #cabecera_principal .menu_principal {
+      display: none; }
+    #cabecera_principal .navbar {
+      background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
+      display: flex;
+      max-width: 100%;
+      max-height: 150px; }
+      #cabecera_principal .navbar .container-fluid {
+        max-width: 100%; }
+        #cabecera_principal .navbar .container-fluid a img {
+          width: 4em;
+          height: 4em;
+          border-radius: 50%; }
+        #cabecera_principal .navbar .container-fluid .navbar-toggler {
+          background-color: white;
+          padding: 10px; }
+          #cabecera_principal .navbar .container-fluid .navbar-toggler .navbar-toggler-icon {
+            background-color: white; }
+        #cabecera_principal .navbar .container-fluid .collapse {
+          margin-top: 20px; }
+          #cabecera_principal .navbar .container-fluid .collapse ul li {
+            border-bottom: 1px solid #b4b2b2;
+            cursor: pointer; }
+            #cabecera_principal .navbar .container-fluid .collapse ul li a {
+              font-size: 1.5rem;
+              color: white; }
+              #cabecera_principal .navbar .container-fluid .collapse ul li a:hover {
+                background-color: #e8dcdc; }
+  #container_main {
+    max-width: 480px; }
+    #container_main .primera_parte .precentacion .precentacion_slogan {
+      width: 100%;
+      padding: 5px; }
+      #container_main .primera_parte .precentacion .precentacion_slogan img {
+        width: 35%; }
+      #container_main .primera_parte .precentacion .precentacion_slogan div {
+        /*top: 180px;*/
+        max-width: 60%;
+        right: 0; }
+        #container_main .primera_parte .precentacion .precentacion_slogan div span {
+          font-size: 3em; }
+    #container_main .primera_parte .precentacion .precentacion_logotipo {
+      display: none; }
+    #container_main .primera_parte .plan_compra {
+      display: none; }
+    #container_main .primera_parte .slide {
+      display: block;
+      background-color: #666666;
+      /*border: 5px solid #333;*/
+      margin: 40px 0; }
+      #container_main .primera_parte .slide .carousel-inner .carousel-item .carousel-caption h5 {
+        /*color:rgb(255,255,255);
                                 font-size: 2rem;*/ }
-    #container_main .primera_parte .slide .carousel-inner .carousel-item .carousel-caption p {
-      /* color:rgb(255,255,255);
+      #container_main .primera_parte .slide .carousel-inner .carousel-item .carousel-caption p {
+        /* color:rgb(255,255,255);
                                 font-size: 2rem;*/ }
-    #container_main .primera_parte .slide .carousel-inner .carousel-item img {
-      max-height: 500px; }
-    #container_main .primera_parte .slide button .carousel-control-prev-icon {
-      background-color: #555555; }
-  #container_main .segunda_parte .colaboradores .colaboradores_targetas {
-    /*background-image: linear-gradient(to top, #222343, #2c3567, #31498e, #2d5eb7, #0f75e2);*/ }
-    #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem {
-      width: 90%;
-      min-height: 350px; }
-      #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .seguir {
-        top: 260px; }
-      #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .div_p {
-        display: block;
-        max-width: 30%;
-        padding-top: 30px; }
-        #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .div_p p {
-          /* &:nth-last-child(3){
+      #container_main .primera_parte .slide .carousel-inner .carousel-item img {
+        max-height: 500px; }
+      #container_main .primera_parte .slide button .carousel-control-prev-icon {
+        background-color: #555555; }
+    #container_main .segunda_parte .colaboradores .colaboradores_targetas {
+      background-image: linear-gradient(to top, #222343, #2c3567, #31498e, #2d5eb7, #0f75e2);
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px; }
+      #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 80%;
+        min-height: 350px;
+        margin: 0 auto; }
+        #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem img {
+          min-width: 70%;
+          min-height: 400px;
+          margin: auto 20px;
+          border-radius: 25% 0 25% 0; }
+        #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .div_p {
+          display: block;
+          max-width: 60%;
+          padding-top: 30px; }
+          #container_main .segunda_parte .colaboradores .colaboradores_targetas .streem .div_p p {
+            text-align: justify;
+            font-size: 1.3rem;
+            /* &:nth-last-child(3){
                                     width: 35%;
                                 }*/ }
-  #container_main .correo .form_c {
-    /* contenedor formulario principal sin titulo  */
-    width: 95%; } }
+    #container_main .segunda_parte .nosotros_principal .nosotros_p {
+      max-width: 100%;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #container_main .segunda_parte .nosotros_principal .nosotros_p div {
+        max-width: 50%; }
+        #container_main .segunda_parte .nosotros_principal .nosotros_p div iframe {
+          max-width: 100%;
+          height: 300px; }
+    #container_main .correo .form_c {
+      /* contenedor formulario principal sin titulo  */
+      max-width: 95%; }
+      #container_main .correo .form_c .logo_form {
+        display: none; }
+      #container_main .correo .form_c .correo_formulario {
+        max-width: 100%; }
+  #pie {
+    /*background-color: rgb(211, 43, 71);*/
+    max-width: 480px; }
+    #pie .pie_datos {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      column-gap: 5px; }
+      #pie .pie_datos .pie_datos_lista {
+        max-width: 40%; }
+        #pie .pie_datos .pie_datos_lista ul li a {
+          font-size: .7em; }
+      #pie .pie_datos .pie_datos_info {
+        max-width: 60%; }
+        #pie .pie_datos .pie_datos_info p {
+          max-width: 100%; }
+        #pie .pie_datos .pie_datos_info ol {
+          max-width: 100%; }
+          #pie .pie_datos .pie_datos_info ol li {
+            font-size: .7em; }
+      #pie .pie_datos .ubicacion {
+        display: none;
+        padding: 5px;
+        max-width: 100%; }
+      #pie .pie_datos .ubicacion iframe {
+        max-width: 400px;
+        border: 0; }
+    #pie .copy {
+      text-align: center;
+      color: white;
+      font-size: 1rem;
+      font-weight: 700; } }
 
 /* para iniciar los estilos poner en ventana de comandos node: npm run watch-css 
 este comando d acuerdo al script que ingresamos en el package.json

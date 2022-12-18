@@ -329,19 +329,19 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
     }
 
     #contairner_principal{
+        max-width: 100%;
         grid-template-areas:
         'header '
         'main'
         'main'
         'main'
         'pie';
-        
-    
     }
 
 
     #cabecera_principal {
-
+        max-width: 480px;
+        display: block;
 
         .logotipo_principal {
             display: none;
@@ -355,22 +355,22 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
         .navbar{
             background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
             display: flex;
-            width: 100%;
-            min-height: 150px;
+            max-width: 100%;
+            max-height: 150px;
 
             .container-fluid{
-
+                max-width: 100%;
                 a{
                     img{
-                        width: 7em;
-                        height: 7em;
+                        width: 4em;
+                        height: 4em;
                         border-radius:50%;
                     }
                 }
 
                 .navbar-toggler{
                     background-color: rgb(255,255,255);
-                    padding: 20px;
+                    padding: 10px;
 
                     .navbar-toggler-icon {
                         background-color: rgb(255,255,255);
@@ -405,6 +405,7 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
     }
 
     #container_main {
+        max-width: 480px;
         
         hr{
             
@@ -416,14 +417,17 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
                 
                 .precentacion_slogan { 
                     width: 100%;   
+                    padding: 5px;
                     img { 
                         width: 35%;    
                     }
 
                     div{
                         /*top: 180px;*/
-                        right: 80px;
-                        span {
+                        max-width: 60%;
+                        right: 0;
+                        span{
+                            font-size: 3em;
                         }
                     }
     
@@ -510,29 +514,42 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
                 }
     
                 .colaboradores_targetas{
-                    /*background-image: linear-gradient(to top, #222343, #2c3567, #31498e, #2d5eb7, #0f75e2);*/
+                    background-image: linear-gradient(to top, #222343, #2c3567, #31498e, #2d5eb7, #0f75e2);
+                    max-width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
     
                     .streem{
-                        width: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        max-width: 80%;
                         min-height: 350px;
+                        margin: 0 auto;
                         
                         .seguir{
-                            top: 260px;
+                            
                             &:hover{
                                
                             }
                         }
                         
                         img{
-                            
+                            min-width: 70%;
+                            min-height: 400px;
+                            margin: auto 20px;
+                            border-radius: 25% 0 25% 0;
                         }
     
                         .div_p{
                             display: block;
-                            max-width: 30%;
+                            max-width: 60%;
                             padding-top: 30px;
                             p{
-        
+                                text-align: justify;
+                                font-size: 1.3rem;
                                 /* &:nth-last-child(3){
                                     width: 35%;
                                 }*/
@@ -557,12 +574,20 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
                 }
     
                 .nosotros_p{
+                    max-width: 100%;
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
             
     
                     div{
+                        max-width: 50%;
                         
                         iframe{
-                            
+                            max-width: 100%;
+                            height: 300px;
                         }
     
                         .titulo_n{
@@ -591,19 +616,17 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
             }
     
             .form_c{ /* contenedor formulario principal sin titulo  */
-                width: 95%;
+                max-width: 95%;
                 
     
                 .logo_form{
-                    
-    
+                    display: none;
                     img{
                     }
                 }
     
                 .correo_formulario{
-                    
-    
+                    max-width: 100%;
                     .mensaje_form{
     
                         .textbox{
@@ -650,6 +673,64 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
                     }
                 }
             }
+        }
+    }
+
+    #pie {
+        /*background-color: rgb(211, 43, 71);*/
+        max-width: 480px;
+    
+    
+        .pie_datos{
+            max-width: 100%;
+            display: flex;
+            justify-content:center;
+            column-gap: 5px;
+
+            .pie_datos_lista{
+                max-width: 40%;
+
+                ul{
+                    li{
+                        a{
+                            font-size: .7em;
+                        }
+                    }
+                }
+            }
+
+            .pie_datos_info{
+                max-width: 60%;
+
+                p{
+                    max-width: 100%;
+                }
+
+                ol{
+                    max-width: 100%;
+                    li{
+                        font-size: .7em;
+                    }
+                }
+            }
+    
+            .ubicacion{
+                display: none;
+                padding: 5px;
+                max-width: 100%;
+            }
+        
+            .ubicacion iframe{
+                max-width: 400px;
+                border: 0;
+            }
+        }
+    
+        .copy{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 1rem;
+            font-weight: 700;
         }
     }
 }
