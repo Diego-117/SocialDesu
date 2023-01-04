@@ -588,8 +588,10 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
     max-width: 480px; }
     #pie .pie_datos {
       max-width: 100%;
+      height: auto;
+      padding: 0 5%;
       justify-content: initial;
-      column-gap: 10%; }
+      column-gap: 5%; }
       #pie .pie_datos .pie_datos_lista {
         max-width: 40%;
         float: left; }
@@ -604,7 +606,8 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
           max-width: 100%;
           padding-left: 0; }
           #pie .pie_datos .pie_datos_info ol li {
-            font-size: .7em; }
+            font-size: .7em;
+            word-wrap: break-word; }
       #pie .pie_datos .ubicacion {
         display: none;
         padding: 5px;

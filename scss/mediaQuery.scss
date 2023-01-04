@@ -680,8 +680,10 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
     
         .pie_datos{
             max-width: 100%;
+            height: auto;
+            padding: 0 5%;
             justify-content: initial;
-            column-gap: 10%;
+            column-gap: 5%;
 
             .pie_datos_lista{
                 max-width: 40%;
@@ -709,6 +711,7 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
                     padding-left: 0;
                     li{
                         font-size: .7em;
+                        word-wrap: break-word;
                     }
                 }
             }
