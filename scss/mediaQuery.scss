@@ -330,12 +330,7 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
 
     #contairner_principal{
         max-width: 100%;
-        grid-template-areas:
-        'header '
-        'main'
-        'main'
-        'main'
-        'pie';
+        
     }
 
 
@@ -356,7 +351,7 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
             background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
             display: flex;
             max-width: 100%;
-            max-height: 150px;
+            height: auto;
 
             .container-fluid{
                 max-width: 100%;
@@ -425,7 +420,7 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
                     div{
                         /*top: 180px;*/
                         max-width: 60%;
-                        right: 0;
+                        right: 10px;
                         span{
                             font-size: 3em;
                         }
@@ -530,9 +525,11 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
                         margin: 0 auto;
                         
                         .seguir{
-                            
+                            top: 300px;
+                            left: 220px;
                             &:hover{
-                               
+                                top: 250px;
+                                left: 220px;
                             }
                         }
                         
@@ -683,12 +680,12 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
     
         .pie_datos{
             max-width: 100%;
-            display: flex;
-            justify-content:center;
-            column-gap: 5px;
+            justify-content: initial;
+            column-gap: 10%;
 
             .pie_datos_lista{
                 max-width: 40%;
+                float: left;
 
                 ul{
                     li{
@@ -700,7 +697,8 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
             }
 
             .pie_datos_info{
-                max-width: 60%;
+                max-width: 50%;
+                float: right;
 
                 p{
                     max-width: 100%;
@@ -708,6 +706,7 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
 
                 ol{
                     max-width: 100%;
+                    padding-left: 0;
                     li{
                         font-size: .7em;
                     }
@@ -718,12 +717,14 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
                 display: none;
                 padding: 5px;
                 max-width: 100%;
+
+                iframe{
+                    max-width: 400px;
+                    border: 0;
+                }
             }
         
-            .ubicacion iframe{
-                max-width: 400px;
-                border: 0;
-            }
+            
         }
     
         .copy{

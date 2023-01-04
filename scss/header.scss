@@ -17,6 +17,8 @@ body{
     /*width: 100%;*/
     font-family: 'Montserrat', sans-serif;
     display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5, auto);
 
     grid-template-areas:
     'header header header'
