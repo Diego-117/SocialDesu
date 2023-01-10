@@ -11,6 +11,7 @@
 }
 body{
     background-color: rgb(240, 242, 249);
+    line-height: 1;
 }
 
 #contairner_principal{
@@ -31,7 +32,8 @@ body{
 }
 
 #cabecera_principal {
-    background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
+    /*background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);*/
+    background: linear-gradient(220.55deg, #FF0000 0%, #470000 100%);
     grid-area: header;
 
     display: flex;

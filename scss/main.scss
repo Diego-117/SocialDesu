@@ -4,16 +4,16 @@
     /*width: 100%;*/
     @include contenedorPrimario(rgb(255, 255, 255));
     /*background-color: rgb(255, 255, 255);*/
-    -webkit-box-shadow: -1px -30px 22px -15px rgba(203,0,143,0.48);
+    /*-webkit-box-shadow: -1px -30px 22px -15px rgba(203,0,143,0.48);
     -moz-box-shadow: -1px -30px 22px -15px rgba(203,0,143,0.48);
-    box-shadow: -1px -30px 22px -15px rgba(203,0,143,0.48);
+    box-shadow: -1px -30px 22px -15px rgba(203,0,143,0.48);*/
 
     grid-area: main;
 
     hr{
         border: 0; 
         height: 0;
-        box-shadow: 0 1px 5px 1px purple;
+        /*box-shadow: 0 1px 5px 1px purple;*/
         margin: 0;
     }
 
@@ -23,7 +23,8 @@
         .precentacion {
             width: 100%;
             padding-top: 10px;
-            background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);
+            /*background-image: linear-gradient(to left, #f2c8f2, #e7a4de, #de7dc7, #d552ac, #cb008f);*/
+            background: linear-gradient(220.55deg, #FF0000 0%, #470000 100%);
     
             display: flex;
 
@@ -66,12 +67,15 @@
 
             .precentacion_logotipo{
                 width: 40%;
+                padding: 10px 0;
 
                 &:hover{
                     padding: 30px;
                 }
 
                 img{
+                    background-color: #fff;
+                    border-radius:50%;
                     
                     &:hover{
                         border-radius:50%;
@@ -90,7 +94,8 @@
 
 
         .plan_compra{
-            background-image: linear-gradient(to left, #3e0070, #63007b, #870084, #a9008a, #cb008f);
+            /*background-image: linear-gradient(to left, #3e0070, #63007b, #870084, #a9008a, #cb008f);*/
+            background-image: linear-gradient(to right, #ff0000, #f40607, #e90b0d, #de0f11, #d31314, #c31015, #b40e15, #a40d15, #8c0712, #74030f, #5d0109, #470000);
             max-width: 80%;
             min-height: 200px;
             margin: 20px auto;

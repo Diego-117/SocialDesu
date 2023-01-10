@@ -73,85 +73,88 @@
         </header>
     <!-- fin de la cabezera-->
 
-    <main>
-        <div>
-            <div>
-                <!--todavia no se decide su uso de este contenedor-->
+    <main id="main_Sesion">
+        <div class="divForm">
+            <div class="precentacion">
                 <h1>Inicia tu sesion</h1>
+                <span>Inicia Sesion con tu cuenta Social Desu</span>
             </div>
 
-            <section>
-                <form action="#">
-                    <div>
-                        <label for="nombre">Nombre</label> 
-                        <input type="text" id="nombre" name="nombre">
+            <section class="form_sesion">
+                <!--inicio otro form-->
+                <form class="formulario_sesion">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Usuario</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">Escoge Bien tu nombre | hay nombres no permitidos.</small>
                     </div>
 
-                    <div>
-                        <label for="email">Email</label> 
-                        <input type="email" id="email" name="email">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">el email ingresado sera lo mas importante, ingresa el correcto.</small>
                     </div>
                     
-                    <div>
-                        <label for="contraseña">Contraseña</label> 
-                        <input type="email" id="contraseña" name="contraseña">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
-
-                    <div>
-                        <input type="submit" value="Iniciar Sesion">
-                    </div>
-
+                    <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
                 </form>
+
+
+                <!--fin-->
             </section>
 
         </div>
-        <aside>
-            <h2>Algunos de los beneficios que contaras al crear una cuenta</h2>
-            <div>
-                <div>
-                    <h3>Beneficio 1</h3>
-                    <img src="#" alt="imagen de la Beneficio actual">
+        <aside class="aside_Sesion">
+            <h2 class="titulo_aside">Beneficios SocialDesu</h2>
+            <hr/>
+            <div class="divs_aside">
+                <div class="div_contenido">
+                    <h3>Descuentos en compras</h3>
+                    <img src="./img/Descuentos.jpg" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
-                <div>
-                    <h3>Beneficio 2</h3>
-                    <img src="#" alt="imagen de la Beneficio actual">
+                <div class="div_contenido">
+                    <h3>Participacion en eventos</h3>
+                    <img src="./img/Eventos.jpg" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
-                <div>
-                    <h3>Beneficio 3</h3>
-                    <img src="#" alt="imagen de la Beneficio actual">
+                <div class="div_contenido">
+                    <h3>Alertas de su interes</h3>
+                    <img src="./img/Alertas.jpg" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
-                <div>
-                    <h3>Beneficio 4</h3>
-                    <img src="#" alt="imagen de la Beneficio actual">
+                <div class="div_contenido">
+                    <h3>Contenido gratis</h3>
+                    <img src="./img/Contenido_gratis.png" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
-                <div>
-                    <h3>Beneficio 5</h3>
-                    <img src="#" alt="imagen de la Beneficio actual">
+                <div class="div_contenido">
+                    <h3>Acceso a eventos sociales</h3>
+                    <img src="./img/Acceso_gratis.jpg" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
             </div>
         </aside>

@@ -73,116 +73,106 @@
         </header>
     <!-- fin de la cabezera-->
 
-    <main>
-        <div>
-            <div>
-                <!--todavia no se decide su uso de este contenedor-->
-                <h1>!Registrate ya!</h1>
+    <main id="main_Registrar">
+        <div class="divForm">
+            <div class="precentacion">
+                <h1>Social Desu</h1>
+                <span>Registrate con nosotros / tu mejor opción</span>
             </div>
 
-            <section>
-                <form action="#">
-                    <div>
-                        <label for="nombre">Nombre</label> 
-                        <input type="text" id="nombre" name="nombre">
+            <section class="form_sesion">
+                <!--inicio otro form-->
+                <form class="formulario_sesion">
+                    <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">Nombre completo</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">Escoge Bien tu nombre | hay nombres no permitidos.</small>
                     </div>
 
-                    <div>
-                        <label for="email">Email</label> 
-                        <input type="email" id="email" name="email">
+                    <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">Apellidos</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">Debera ser tu apellido completo.</small>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">el email ingresado sera lo mas importante, ingresa el correcto.</small>
                     </div>
                     
-                    <div>
-                        <label for="contraseña">Contraseña</label> 
-                        <input type="email" id="contraseña" name="contraseña">
-                    </div>
-                        
-                    <div>
-                        <label for="edad">fecha de Nacimiento</label> 
-                        <input type="date" id="edad" name="edad">
+                    <div class="form-group mb-3">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
 
-                    <div>
-                        <label for="pais">Selecciona tu pais:</label>
-                        <select name="pais" id="pais">
-                            <option value="mx">Mexico</option>
-                            <option value="us">United States</option>
-                            <option value="pr">Peru</option>
-                            <option value="jp">Japon</option>
-                        </select>
+                    <div class="form-group mb-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Hombre</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">mujer</label>
+                          </div>
                     </div>
-
-                    <div>
-                        <div>
-                            <p>Sexo</p>
-                            <div>
-                                <label for="F">Femenino</label>
-                            <input type="checkbox" id="F" name="F" value="F">
-                            </div>
-        
-                            <div>
-                                <label for="M">Masculino</label>
-                                <input type="checkbox" id="M" name="M" value="M">
-                            </div> 
-                            
-                        </div>
-                    </div>
-
-                    <div>
-                        <input type="submit" value="Terminar">
-                    </div>
-
+                    
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
                 </form>
+
+
+                <!--fin-->
             </section>
 
         </div>
-        <aside>
-            <h2>Algunos de los beneficios que contaras al crear una cuenta</h2>
-            <div>
-                <div>
-                    <h3>Beneficio 1 participar por mangas gratis</h3>
-                    <img src="https://gogonihon.com/wp-content/uploads/2019/06/Manga-1-min.jpg alt="imagen de la Beneficio actual">
+        <aside class="aside_Sesion">
+            <h2 class="titulo_aside">Beneficios SocialDesu</h2>
+            <hr/>
+            <div class="divs_aside">
+                <div class="div_contenido">
+                    <h3>Descuentos en compras</h3>
+                    <img src="./img/Descuentos.jpg" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
-                <div>
-                    <h3>Beneficio 2</h3>
-                    <img src="#" alt="imagen de la Beneficio actual">
+                <div class="div_contenido">
+                    <h3>Participacion en eventos</h3>
+                    <img src="./img/Eventos.jpg" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
-                <div>
-                    <h3>Beneficio 3</h3>
-                    <img src="#" alt="imagen de la Beneficio actual">
+                <div class="div_contenido">
+                    <h3>Alertas de su interes</h3>
+                    <img src="./img/Alertas.jpg" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
-                <div>
-                    <h3>Beneficio 4</h3>
-                    <img src="#" alt="imagen de la Beneficio actual">
+                <div class="div_contenido">
+                    <h3>Contenido gratis</h3>
+                    <img src="./img/Contenido_gratis.png" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
-                <div>
-                    <h3>Beneficio 5</h3>
-                    <img src="#" alt="imagen de la Beneficio actual">
+                <div class="div_contenido">
+                    <h3>Acceso a eventos sociales</h3>
+                    <img src="./img/Acceso_gratis.jpg" alt="imagen de la Beneficio actual">
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa est quod blanditiis unde nobis iste 
                         doloremque, corrupti vel accusantium nihil!
                     </p>
-                    <span><a href="">Ver mas...</a></span>
+                    <span><a href="" class="btn btn-outline-info btn-sm">Ver mas...</a></span>
                 </div>
             </div>
         </aside>

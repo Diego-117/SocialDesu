@@ -1,0 +1,109 @@
+#main_descargas{
+    grid-area: main;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    .cont_principal{
+        width: 70%;
+        
+        .membresias{
+
+            h1{
+    
+            }
+    
+            .membresias_div{
+                width: 80%;
+                max-width: 80%;
+                margin: 0 auto;
+    
+                .card-footer{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    a{
+                        text-decoration: none;
+                        color: rgb(73, 181, 253);
+                    }
+                }
+            }
+        }
+    
+        .tablas_container{
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+
+            .table_contenedor{
+
+                .contenido_desc{
+
+                    border-left: 5px solid rgb(27, 28, 54);
+                    padding-left: 10px;
+
+                    h5{
+                        border-bottom: 5px solid rgb(40, 42, 122);
+                        width: 150px;
+                    }
+
+                    p{
+                        text-align: justify;
+                    }
+                }
+
+                .tabla{
+                    h6{
+                        padding: 10px 0;
+                        color: #333;
+                        background: rgb(0,255,255);
+                        text-align: center;
+                        font-weight: 700;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    aside{
+        width: 20%;
+        /*background: red;*/
+
+        .novedades{
+            padding: 10px 0;
+            h2{
+                padding: 5px;
+                text-align: center;
+                color: rgb(73, 181, 253);
+                font-weight: 600;
+            }
+            .divs_novedades{
+                .card{
+                    margin: 10px auto;
+
+                }
+            }
+        }
+
+        .comentarios{
+
+            .div_comentarios{
+
+                .card{
+                    margin: 10px auto;
+
+                    .card-body{
+
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
