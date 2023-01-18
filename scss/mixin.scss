@@ -22,3 +22,12 @@
     font-family: $_tipografia;
     font-weight: 500;
 }
+
+@mixin titulosSidebar(){
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 900;
+    padding: 25px 0;
+    text-align: center;
+    margin-right: 10px;
+}

@@ -33,14 +33,161 @@
     }
 
     .tienda_contenido{
+        height: auto;
         margin-bottom: 100px;
         display: flex;
 
-        aside{
+        .menu_galeria{
             width: 20%;
-            background: coral;
-        
+            background: rgb(33, 37, 41);
             margin-right: 5rem;
+            padding: 10px 0 10px 10px;
+            display: flex;
+            flex-direction: column;
+            column-gap: 5px;
+
+            hr{
+                background: rgb(158, 163, 168);
+                width: 95%;
+                height: 2px;
+                float: left;
+            }
+
+            .categorias{
+                h3{
+                    @include titulosSidebar();
+
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 5px;
+
+                        path{
+                            color: rgb(215, 0, 0);
+                        }
+                    }
+                }
+
+                ul{
+                    width: 100%;
+                    padding-left: 0;
+
+                    li{
+                        color: #fff;
+                        padding: 10px 0 10px 2em;
+                        list-style: none;
+
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 3px;
+    
+                            path{
+                                
+                            }
+                        }
+
+                        &:hover{
+                            border-top: 1px solid #fff;
+                            border-bottom: 1px solid #fff;
+                            border-right: 8px solid rgb(101, 59, 221);
+                            background:rgba(101, 59, 221, 0.2) ;
+                        }
+                    }
+                }
+            }
+
+            .filtros{
+
+                h3{
+                    @include titulosSidebar();
+
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 5px;
+
+                        path{
+                            color: rgb(215, 0, 0);
+                        }
+                    }
+                }
+
+                .form_filtro{
+                    width: 90%;
+                    max-width: 90%;
+                    form{
+                        margin-left: 2em;
+
+                        .dinero_monto{
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            row-gap: 5px;
+
+                            label{
+                                margin-right: 3px;
+                            }
+
+                            input{
+                                margin-left: 2px;
+                            }
+                        }
+
+                        div{
+                            label{
+                                color: #fff
+                            }
+                        }
+                    }
+                }
+            }
+
+            .masBuscados{
+
+                h3{
+                    @include titulosSidebar();
+
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 5px;
+
+                        path{
+                            color: rgb(215, 0, 0);
+                        }
+                    }
+                }
+
+                ol{
+                    width: 100%;
+                    padding-left: 0;
+                    li{
+                        color: #fff;
+                        padding: 10px 0 10px 2em;
+                        list-style: none;
+
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 3px;
+    
+                            path{
+                                
+                            }
+                        }
+
+                        &:hover{
+                            border-top: 1px solid #fff;
+                            border-bottom: 1px solid #fff;
+                            border-right: 8px solid rgb(101, 59, 221);
+                            background:rgba(101, 59, 221, 0.2) ;
+                        }
+                    }
+                }
+            }
         }
 
         #galeria{
