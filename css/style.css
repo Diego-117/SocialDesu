@@ -384,6 +384,7 @@ body {
     min-height: 200px;
     margin: 50px auto;
     border: 3px solid #333;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -391,14 +392,17 @@ body {
     .main_tienda .buscador .buscador_form {
       border: 2px solid red;
       display: flex; }
-      .main_tienda .buscador .buscador_form .carrito {
-        display: flex;
-        align-items: center;
-        margin: 0 5px; }
-        .main_tienda .buscador .buscador_form .carrito img {
-          width: 50px;
-          height: 50px;
-          cursor: pointer; }
+    .main_tienda .buscador .carrito {
+      display: flex;
+      align-items: center;
+      margin: 0 5px;
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .main_tienda .buscador .carrito img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer; }
   .main_tienda .tienda_contenido {
     height: auto;
     margin-bottom: 100px;
@@ -717,6 +721,11 @@ body {
         font-weight: 600; }
       #main_descargas aside .novedades .divs_novedades .card {
         margin: 10px auto; }
+    #main_descargas aside .comentarios h2 {
+      padding: 5px;
+      text-align: center;
+      color: #49b5fd;
+      font-weight: 600; }
     #main_descargas aside .comentarios .div_comentarios .card {
       margin: 10px auto; }
       #main_descargas aside .comentarios .div_comentarios .card .card-body a {
@@ -1044,7 +1053,136 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
       text-align: center;
       color: white;
       font-size: 1rem;
-      font-weight: 700; } }
+      font-weight: 700; }
+  #main_Sesion {
+    flex-direction: column;
+    column-gap: 10px; }
+    #main_Sesion .divForm {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      flex-direction: column; }
+      #main_Sesion .divForm .precentacion {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 10px 0; }
+        #main_Sesion .divForm .precentacion h1 {
+          font-size: 1.5em;
+          text-align: center; }
+        #main_Sesion .divForm .precentacion span {
+          font-size: .9em;
+          text-align: center;
+          display: block; }
+      #main_Sesion .divForm .form_sesion {
+        width: 90%;
+        max-width: 95%;
+        height: auto;
+        margin: 0 auto; }
+    #main_Sesion .aside_Sesion {
+      width: 100%;
+      max-width: 100%; }
+      #main_Sesion .aside_Sesion .divs_aside {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px; }
+        #main_Sesion .aside_Sesion .divs_aside .div_contenido {
+          width: 80%; }
+          #main_Sesion .aside_Sesion .divs_aside .div_contenido h3 {
+            font-size: .9em; }
+          #main_Sesion .aside_Sesion .divs_aside .div_contenido p {
+            text-align: justify; }
+  #main_Registrar {
+    flex-direction: column;
+    column-gap: 10px; }
+    #main_Registrar .divForm {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      flex-direction: column; }
+      #main_Registrar .divForm .precentacion {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 10px 0; }
+        #main_Registrar .divForm .precentacion h1 {
+          font-size: 1.5em;
+          text-align: center; }
+        #main_Registrar .divForm .precentacion span {
+          font-size: .9em;
+          text-align: center;
+          display: block; }
+      #main_Registrar .divForm .form_sesion {
+        width: 90%;
+        max-width: 95%;
+        height: auto;
+        margin: 0 auto; }
+    #main_Registrar .aside_Sesion {
+      width: 100%;
+      max-width: 100%; }
+      #main_Registrar .aside_Sesion .divs_aside {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px; }
+        #main_Registrar .aside_Sesion .divs_aside .div_contenido {
+          width: 80%; }
+          #main_Registrar .aside_Sesion .divs_aside .div_contenido h3 {
+            font-size: .9em; }
+          #main_Registrar .aside_Sesion .divs_aside .div_contenido p {
+            text-align: justify; }
+  #main_descargas {
+    flex-direction: column;
+    justify-content: center; }
+    #main_descargas .cont_principal {
+      width: 95%;
+      max-width: 95%;
+      margin: 0 auto; }
+    #main_descargas aside {
+      width: 95%;
+      margin: 0 auto; }
+      #main_descargas aside .novedades .divs_novedades {
+        margin: 0 auto; }
+      #main_descargas aside .comentarios {
+        margin: 0 auto; }
+        #main_descargas aside .comentarios h2 {
+          text-align: center; }
+  .main_tienda .buscador {
+    width: 90%;
+    flex-direction: column; }
+    .main_tienda .buscador .buscador_form {
+      width: 100%; }
+  .main_tienda .tienda_contenido .menu_galeria {
+    display: none; }
+    .main_tienda .tienda_contenido .menu_galeria .categorias h3 {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: 900;
+      padding: 25px 0;
+      text-align: center;
+      margin-right: 10px; }
+    .main_tienda .tienda_contenido .menu_galeria .filtros h3 {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: 900;
+      padding: 25px 0;
+      text-align: center;
+      margin-right: 10px; }
+    .main_tienda .tienda_contenido .menu_galeria .masBuscados h3 {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: 900;
+      padding: 25px 0;
+      text-align: center;
+      margin-right: 10px; }
+  .main_tienda .tienda_contenido #galeria {
+    background: #0f75e2;
+    width: 95%;
+    margin: 0 auto;
+    grid-template-columns: 100%;
+    grid-auto-rows: 250px;
+    row-gap: 10px; }
+    .main_tienda .tienda_contenido #galeria .galeria_articulo {
+      width: 100%; } }
 
 /* para iniciar los estilos poner en ventana de comandos node: npm run watch-css 
 este comando d acuerdo al script que ingresamos en el package.json

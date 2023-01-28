@@ -739,5 +739,457 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
             font-weight: 700;
         }
     }
+
+    //TODO: estilos para iniciar sesion
+
+    #main_Sesion{
+        flex-direction: column;
+        column-gap: 10px;
+    
+        .divForm{
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            flex-direction: column;
+            //justify-content: space-around;
+    
+            .precentacion{
+                width: 100%;
+                max-width: 100%;
+                margin: 0 0 10px 0;
+
+                h1{
+                    font-size: 1.5em;
+                    text-align: center;
+                }
+    
+                span{
+                    font-size: .9em;
+                    text-align: center;
+                    display: block;
+                }
+            } 
+    
+            .form_sesion{
+                width: 90%;
+                max-width: 95%;
+                height: auto;
+                margin: 0 auto;
+    
+                .formulario_sesion{
+                    
+                    
+                    .btn{
+                        
+                    }
+                }
+            }
+        }
+    
+        .aside_Sesion{
+            width: 100%;
+            max-width: 100%;
+    
+            .titulo_aside{
+                
+            }
+    
+            hr{
+                
+            }
+    
+            .divs_aside{
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+    
+                .div_contenido{
+                    width: 80%;
+    
+                    h3{
+                        font-size: .9em;
+                    }
+    
+                    img{
+                        
+                    }
+    
+                    p{
+                        text-align: justify;
+                        //word-spacing: 1px;
+                    }
+    
+                    span{
+                        
+                        a{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //TODO: Registrarte
+    #main_Registrar{
+        flex-direction: column;
+        column-gap: 10px;
+        .divForm{
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            flex-direction: column;
+
+            .precentacion{
+                width: 100%;
+                max-width: 100%;
+                margin: 0 0 10px 0;
+    
+                h1{
+                    font-size: 1.5em;
+                    text-align: center;
+                }
+    
+                span{
+                    font-size: .9em;
+                    text-align: center;
+                    display: block;
+                }
+            } 
+    
+            .form_sesion{
+                width: 90%;
+                max-width: 95%;
+                height: auto;
+                margin: 0 auto;
+    
+                .formulario_sesion{
+                    
+                    
+                    .btn{
+                        
+                    }
+                }
+            }
+        }
+    
+        .aside_Sesion{
+            width: 100%;
+            max-width: 100%;
+    
+            .titulo_aside{
+                
+            }
+    
+            hr{
+                
+            }
+    
+            .divs_aside{
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+    
+                .div_contenido{
+                    width: 80%;
+    
+                    h3{
+                        font-size: .9em;
+                    }
+    
+                    img{
+                        
+                    }
+    
+                    p{
+                        text-align: justify;
+                    }
+    
+                    span{
+                        
+                        a{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //TODO: Descargas
+    #main_descargas{
+        flex-direction: column;
+        justify-content:center;
+        
+        .cont_principal{
+            width: 95%;
+            max-width: 95%;
+            margin: 0 auto;
+            .membresias{
+                
+                h1{
+        
+                }
+        
+                .membresias_div{
+                    
+        
+                    .card-footer{
+                        
+                        a{
+                            
+                        }
+                    }
+                }
+            }
+        
+            .tablas_container{
+                
+    
+                .table_contenedor{
+    
+                    .contenido_desc{
+
+    
+                        h5{
+                            
+                        }
+    
+                        p{
+                            
+                        }
+                    }
+    
+                    .tabla{
+                        h6{
+                            
+                        }
+                    }
+                }
+            }
+        }
+    
+        aside{
+            width: 95%;
+            margin: 0 auto;
+            .novedades{
+                
+                h2{
+                    
+                }
+                .divs_novedades{
+                    margin: 0 auto;
+
+                    .card{
+                        
+                    }
+                }
+            }
+    
+            .comentarios{
+                margin: 0 auto;
+
+                h2{
+                    text-align: center;
+                }
+                .div_comentarios{
+    
+                    .card{
+                        
+                        .card-body{
+
+                            a{
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //TODO: tienda
+    .main_tienda{
+        
+    
+        .buscador{
+            width: 90%;
+            flex-direction: column;
+            
+    
+            .buscador_form{
+                width: 100%;
+    
+                .carrito{
+                    
+    
+                    img{
+                        
+                    }
+                }
+            }
+        }
+    
+        .tienda_contenido{
+    
+            .menu_galeria{
+                display: none;
+    
+                hr{
+                    
+                }
+    
+                .categorias{
+                    h3{
+                        @include titulosSidebar();
+    
+                        svg{
+                            
+    
+                            path{
+                                
+                            }
+                        }
+                    }
+    
+                    ul{
+                        
+    
+                        li{
+                            
+    
+                            svg{
+                                
+        
+                                path{
+                                    
+                                }
+                            }
+    
+                            &:hover{
+                                
+                            }
+                        }
+                    }
+                }
+    
+                .filtros{
+    
+                    h3{
+                        @include titulosSidebar();
+    
+                        svg{
+                            
+    
+                            path{
+                                
+                            }
+                        }
+                    }
+    
+                    .form_filtro{
+                        
+                        form{
+                            
+    
+                            .dinero_monto{
+                                
+    
+                                label{
+                                    
+                                }
+    
+                                input{
+                                    
+                                }
+                            }
+    
+                            div{
+                                label{
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .masBuscados{
+    
+                    h3{
+                        @include titulosSidebar();
+    
+                        svg{
+                            
+    
+                            path{
+                                
+                            }
+                        }
+                    }
+    
+                    ol{
+                        
+                        li{
+                            
+    
+                            svg{
+                                
+        
+                                path{
+                                    
+                                }
+                            }
+    
+                            &:hover{
+                                
+                            }
+                        }
+                    }
+                }
+            }
+    
+            #galeria{
+                background: #0f75e2;
+                width: 95%;
+                margin: 0 auto;
+                grid-template-columns: 100%;
+                grid-auto-rows: 250px;
+                row-gap: 10px;
+    
+                .galeria_articulo{
+                    width: 100%;
+                    img{
+                        
+                    }
+    
+                    div{
+                        
+    
+                        p{
+                            
+                        }
+    
+                        button{
+                            
+    
+                            &:active{
+                                
+                            }
+                        }
+                    }
+    
+                    .nom_prod {
+                        
+                    }
+    
+                    &:hover {
+                        
+                    }
+                }
+            }
+        }
+    }
 }
 
