@@ -71,13 +71,31 @@ body{
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
+                padding-left: 0;
 
                 li {
                     list-style: none;
+                    width: 30%;
+                    text-align: center;
+                    margin-left: 5px;
                     
                     a{
-                        display:inline-block ;
-                        text-decoration: none;
+                        background-color: #333;
+                        border-radius: 50%;
+                        width: 100%;
+                        height: auto;
+                        padding: 10px;
+                        
+                        svg{
+                            width: 25px;
+                            height: 25px;
+                            background-color: #fff;
+                            border-radius: 50%;
+                        }
+
+                        .bi-whatsapp{
+                            color: rgb(52, 174, 52);
+                        }
                     }
                 }
             }
