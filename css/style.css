@@ -80,6 +80,27 @@ body {
     #cabecera_principal .menu_principal li {
       padding: 8px;
       margin-left: 20px; }
+      #cabecera_principal .menu_principal li #btn_carrito {
+        background: purple;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #cabecera_principal .menu_principal li #btn_carrito .bi-cart4 {
+          margin-right: 3px; }
+        #cabecera_principal .menu_principal li #btn_carrito #cantidadCarrito {
+          background-color: #fff;
+          height: 20px;
+          border-radius: 50%;
+          border: 1px solid #333;
+          color: black;
+          padding: 5px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: bold;
+          margin-left: 10px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center; }
       #cabecera_principal .menu_principal li:hover {
         border-bottom: 2px solid #47b4fd;
         cursor: pointer; }
