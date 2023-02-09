@@ -414,6 +414,164 @@ body {
   width: 100%;
   padding: 10px;
   grid-area: main; }
+  .main_tienda .offcanvas .offcanvas-header {
+    background-color: #1a1a1a; }
+    .main_tienda .offcanvas .offcanvas-header .offcanvas-title {
+      color: #fff; }
+      .main_tienda .offcanvas .offcanvas-header .offcanvas-title #img-icon {
+        max-width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%; }
+    .main_tienda .offcanvas .offcanvas-header .btn-close {
+      background-color: white; }
+  .main_tienda .offcanvas .offcanvas-body {
+    background-color: #1a1a1a; }
+    .main_tienda .offcanvas .offcanvas-body #text {
+      color: #fff;
+      border-bottom: 2px solid #aca9af; }
+    .main_tienda .offcanvas .offcanvas-body #car_dv #card_car {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .main_tienda .offcanvas .offcanvas-body #car_dv #card_car img {
+        max-width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin: auto 0; }
+      .main_tienda .offcanvas .offcanvas-body #car_dv #card_car .card_body {
+        padding: 5px; }
+        .main_tienda .offcanvas .offcanvas-body #car_dv #card_car .card_body .title {
+          color: #49b5fd;
+          font-size: 1.3em; }
+        .main_tienda .offcanvas .offcanvas-body #car_dv #card_car .card_body .card_subtitle {
+          color: #fff;
+          font-size: 1em; }
+        .main_tienda .offcanvas .offcanvas-body #car_dv #card_car .card_body .card-cant {
+          color: #fff;
+          font-size: .8em; }
+      .main_tienda .offcanvas .offcanvas-body #car_dv #card_car .buttons {
+        width: 100%;
+        margin: 15px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; }
+        .main_tienda .offcanvas .offcanvas-body #car_dv #card_car .buttons a {
+          text-decoration: none;
+          font-weight: bolder; }
+    .main_tienda .offcanvas .offcanvas-body #car_dv hr {
+      background-color: #aca9af; }
+  .main_tienda #divOfCanvace {
+    display: none; }
+    .main_tienda #divOfCanvace .offcanvas {
+      background: #212529; }
+      .main_tienda #divOfCanvace .offcanvas .offcanvas-header {
+        color: #fff; }
+        .main_tienda #divOfCanvace .offcanvas .offcanvas-header .btn-close {
+          background-color: #fff; }
+      .main_tienda #divOfCanvace .offcanvas .menu_galeria {
+        width: 100%;
+        background: #212529;
+        padding: 10px 0 10px 10px;
+        display: flex;
+        flex-direction: column;
+        column-gap: 5px; }
+        .main_tienda #divOfCanvace .offcanvas .menu_galeria hr {
+          background: #9ea3a8;
+          width: 95%;
+          height: 2px;
+          float: left; }
+        .main_tienda #divOfCanvace .offcanvas .menu_galeria .categorias h3 {
+          color: #fff;
+          font-size: 1.5em;
+          font-weight: 900;
+          padding: 25px 0;
+          text-align: center;
+          margin-right: 10px; }
+          .main_tienda #divOfCanvace .offcanvas .menu_galeria .categorias h3 svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px; }
+            .main_tienda #divOfCanvace .offcanvas .menu_galeria .categorias h3 svg path {
+              color: #d70000; }
+        .main_tienda #divOfCanvace .offcanvas .menu_galeria .categorias ul {
+          width: 100%;
+          padding-left: 0; }
+          .main_tienda #divOfCanvace .offcanvas .menu_galeria .categorias ul li {
+            color: #fff;
+            padding: 10px 0 10px 2em;
+            list-style: none; }
+            .main_tienda #divOfCanvace .offcanvas .menu_galeria .categorias ul li svg {
+              width: 20px;
+              height: 20px;
+              margin-right: 3px; }
+            .main_tienda #divOfCanvace .offcanvas .menu_galeria .categorias ul li:hover {
+              border-top: 1px solid #fff;
+              border-bottom: 1px solid #fff;
+              border-right: 8px solid #653bdd;
+              background: rgba(101, 59, 221, 0.2); }
+        .main_tienda #divOfCanvace .offcanvas .menu_galeria .filtros h3 {
+          color: #fff;
+          font-size: 1.5em;
+          font-weight: 900;
+          padding: 25px 0;
+          text-align: center;
+          margin-right: 10px; }
+          .main_tienda #divOfCanvace .offcanvas .menu_galeria .filtros h3 svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px; }
+            .main_tienda #divOfCanvace .offcanvas .menu_galeria .filtros h3 svg path {
+              color: #d70000; }
+        .main_tienda #divOfCanvace .offcanvas .menu_galeria .filtros .form_filtro {
+          width: 90%;
+          max-width: 90%; }
+          .main_tienda #divOfCanvace .offcanvas .menu_galeria .filtros .form_filtro form {
+            margin-left: 2em; }
+            .main_tienda #divOfCanvace .offcanvas .menu_galeria .filtros .form_filtro form .dinero_monto {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: center;
+              align-items: center;
+              row-gap: 5px; }
+              .main_tienda #divOfCanvace .offcanvas .menu_galeria .filtros .form_filtro form .dinero_monto label {
+                margin-right: 3px; }
+              .main_tienda #divOfCanvace .offcanvas .menu_galeria .filtros .form_filtro form .dinero_monto input {
+                margin-left: 2px; }
+            .main_tienda #divOfCanvace .offcanvas .menu_galeria .filtros .form_filtro form div label {
+              color: #fff; }
+        .main_tienda #divOfCanvace .offcanvas .menu_galeria .masBuscados h3 {
+          color: #fff;
+          font-size: 1.5em;
+          font-weight: 900;
+          padding: 25px 0;
+          text-align: center;
+          margin-right: 10px; }
+          .main_tienda #divOfCanvace .offcanvas .menu_galeria .masBuscados h3 svg {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px; }
+            .main_tienda #divOfCanvace .offcanvas .menu_galeria .masBuscados h3 svg path {
+              color: #d70000; }
+        .main_tienda #divOfCanvace .offcanvas .menu_galeria .masBuscados ol {
+          width: 100%;
+          padding-left: 0; }
+          .main_tienda #divOfCanvace .offcanvas .menu_galeria .masBuscados ol li {
+            color: #fff;
+            padding: 10px 0 10px 2em;
+            list-style: none; }
+            .main_tienda #divOfCanvace .offcanvas .menu_galeria .masBuscados ol li svg {
+              width: 20px;
+              height: 20px;
+              margin-right: 3px; }
+            .main_tienda #divOfCanvace .offcanvas .menu_galeria .masBuscados ol li:hover {
+              border-top: 1px solid #fff;
+              border-bottom: 1px solid #fff;
+              border-right: 8px solid #653bdd;
+              background: rgba(101, 59, 221, 0.2); }
   .main_tienda .buscador {
     width: 50%;
     min-height: 200px;
@@ -1186,6 +1344,8 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
         margin: 0 auto; }
         #main_descargas aside .comentarios h2 {
           text-align: center; }
+  .main_tienda #divOfCanvace {
+    display: block; }
   .main_tienda .buscador {
     width: 90%;
     flex-direction: column; }

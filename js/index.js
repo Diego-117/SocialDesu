@@ -126,6 +126,7 @@ function revisaCarrito(){
     document.getElementById('car_dv').innerHTML = objCont;
     //configuramos la cantidad de objetos en el carrito
     document.getElementById('cantidadCarrito').innerHTML = LTSCarrito.length;
+    document.getElementById('cantidadCarrito2').innerHTML = LTSCarrito.length;
 }
 //revisaCarrito();
 
@@ -133,16 +134,20 @@ function revisaCarrito(){
 
 function carritoObj(e){
     let objCar = `
-    <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h3 class="card-title">${e.nom}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Precio: ${e.precio}</h6>
-      <h6 class="card-subtitle mb-2 text-muted">Cantidad: ${e.cantidad}<div><button class="btn btn-secondary" onclick="agregarMas(${e.id})">+</button>|<button class="btn btn-secondary" onclick="agregarMenos(${e.id})">-</button></div></h6>
-      <p class="card-text">futura descripcion de articulo ajaja.</p>
-      <a href="#" >Editar Articulo</a>
-      <button class="btn btn-primary" onclick="eliminar(${e.id})">Eliminar articulo</button>
+    <div id="card_car">
+        <img src="./img/galeria/${e.ruta}" alt="productos">
+        <div class="card_body">
+            <h3 class="title">${e.nom}</h3>
+            <h4 class="card_subtitle ">Precio: $${e.precio}</h4>
+            <p class="card-cant">Cantidad: ${e.cantidad}<div><button class="btn btn-secondary" onclick="agregarMas(${e.id})">+</button>|<button class="btn btn-secondary" onclick="agregarMenos(${e.id})">-</button></div></p>
+        </div>
+        <div class="buttons">
+            <button class="btn btn-primary" onclick="editarArt(${e.id})">Editar</button>
+            <button class="btn btn-primary" onclick="eliminar(${e.id})">Eliminar articulo</button>
+        </div>
     </div>
-  </div>`;
+    <hr>
+    `;
   return objCar;
 }
 

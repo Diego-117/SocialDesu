@@ -1020,7 +1020,10 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
     //TODO: tienda
     .main_tienda{
         
-    
+        #divOfCanvace{
+            display: block;
+        }
+
         .buscador{
             width: 90%;
             flex-direction: column;
@@ -1040,7 +1043,7 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
         }
     
         .tienda_contenido{
-    
+            
             .menu_galeria{
                 display: none;
     

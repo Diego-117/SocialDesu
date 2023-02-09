@@ -3,6 +3,262 @@
     padding: 10px;
     grid-area: main;
 
+    .offcanvas{
+
+        .offcanvas-header{
+            background-color: #1a1a1a;
+            .offcanvas-title{
+                color: #fff;
+
+                #img-icon{
+                    max-width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+    
+            .btn-close{
+                background-color: rgb(255, 255, 255);
+            }
+        }
+
+        .offcanvas-body{
+            background-color: #1a1a1a;
+            #text{
+                color: #fff;
+                border-bottom: 2px solid rgb(172, 169, 175);
+            }
+
+            #car_dv{
+                
+
+                #card_car{
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+                    img{
+                        max-width: 150px;
+                        height: 150px;
+                        object-fit: cover;
+                        margin: auto 0;
+                    }
+
+                    .card_body{
+                        padding: 5px;
+                        .title{
+                            color: rgb(73, 181, 253);
+                            font-size: 1.3em;
+                        }
+                        .card_subtitle{
+                            color: #fff;
+                            font-size: 1em;
+                        }
+                        .card-cant{
+                            color: #fff;
+                            font-size: .8em;
+                            .btn{
+                                
+                            }
+                        }
+                    }
+
+                    .buttons{
+                        width: 100%;
+                        margin: 15px 0 0 0;
+
+                        display: flex ;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                        a{
+                            text-decoration: none;
+                            font-weight: bolder;
+                        }
+
+                        .btn{
+
+                        }
+                    }
+                }
+
+                hr{
+                    background-color: rgb(172, 169, 175);
+                }
+            }
+        }
+
+    }
+
+    #divOfCanvace{
+        display: none;
+
+        .offcanvas{
+            background: rgb(33, 37, 41);
+            .offcanvas-header{
+                color: #fff;
+                .btn-close {
+                    background-color: #fff;
+                }
+            }
+            .menu_galeria{
+                width: 100%;
+                background: rgb(33, 37, 41);
+                //margin-right: 5rem;
+                padding: 10px 0 10px 10px;
+                display: flex;
+                flex-direction: column;
+                column-gap: 5px;
+    
+                hr{
+                    background: rgb(158, 163, 168);
+                    width: 95%;
+                    height: 2px;
+                    float: left;
+                }
+    
+                .categorias{
+                    h3{
+                        @include titulosSidebar();
+    
+                        svg{
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 5px;
+    
+                            path{
+                                color: rgb(215, 0, 0);
+                            }
+                        }
+                    }
+    
+                    ul{
+                        width: 100%;
+                        padding-left: 0;
+    
+                        li{
+                            color: #fff;
+                            padding: 10px 0 10px 2em;
+                            list-style: none;
+    
+                            svg{
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 3px;
+        
+                                path{
+                                    
+                                }
+                            }
+    
+                            &:hover{
+                                border-top: 1px solid #fff;
+                                border-bottom: 1px solid #fff;
+                                border-right: 8px solid rgb(101, 59, 221);
+                                background:rgba(101, 59, 221, 0.2) ;
+                            }
+                        }
+                    }
+                }
+    
+                .filtros{
+    
+                    h3{
+                        @include titulosSidebar();
+    
+                        svg{
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 5px;
+    
+                            path{
+                                color: rgb(215, 0, 0);
+                            }
+                        }
+                    }
+    
+                    .form_filtro{
+                        width: 90%;
+                        max-width: 90%;
+                        form{
+                            margin-left: 2em;
+    
+                            .dinero_monto{
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: nowrap;
+                                justify-content: center;
+                                align-items: center;
+                                row-gap: 5px;
+    
+                                label{
+                                    margin-right: 3px;
+                                }
+    
+                                input{
+                                    margin-left: 2px;
+                                }
+                            }
+    
+                            div{
+                                label{
+                                    color: #fff
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .masBuscados{
+    
+                    h3{
+                        @include titulosSidebar();
+    
+                        svg{
+                            width: 30px;
+                            height: 30px;
+                            margin-right: 5px;
+    
+                            path{
+                                color: rgb(215, 0, 0);
+                            }
+                        }
+                    }
+    
+                    ol{
+                        width: 100%;
+                        padding-left: 0;
+                        li{
+                            color: #fff;
+                            padding: 10px 0 10px 2em;
+                            list-style: none;
+    
+                            svg{
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 3px;
+        
+                                path{
+                                    
+                                }
+                            }
+    
+                            &:hover{
+                                border-top: 1px solid #fff;
+                                border-bottom: 1px solid #fff;
+                                border-right: 8px solid rgb(101, 59, 221);
+                                background:rgba(101, 59, 221, 0.2) ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .buscador{
         width: 50%;
         min-height: 200px;
