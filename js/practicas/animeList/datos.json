@@ -1,0 +1,37 @@
+[
+    {
+        "nombre": "Diego Rodrigo",
+        "app_Pa": "Vargas",
+        "app_Ma": "Gines",
+        "edad": 27,
+        "ruta_img": "./img/imagenRandon.jpg"
+    },
+    {
+        "nombre": "Jesus Alexis",
+        "app_Pa": "Vargas",
+        "app_Ma": "Gines",
+        "edad": 24,
+        "ruta_img": "./img/imagenRandon.jpg"
+    },
+    {
+        "nombre": "Irma",
+        "app_Pa": "Vargas",
+        "app_Ma": "Gines",
+        "edad": 50,
+        "ruta_img": "./img/imagenRandon.jpg"
+    },
+    {
+        "nombre": "Andre",
+        "app_Pa": "Vasquez",
+        "app_Ma": "vargas",
+        "edad": 24,
+        "ruta_img": "./img/imagenRandon.jpg"
+    },
+    {
+        "nombre": "maria elena",
+        "app_Pa": "Vargas",
+        "app_Ma": "Gines",
+        "edad": 48,
+        "ruta_img": "./img/imagenRandon.jpg"
+    }
+]
