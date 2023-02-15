@@ -185,140 +185,8 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
 /* Medidas para ipad y tablets */
 
 @media only screen and (max-width: 768px) {
-    *{
-        /*background: rgb(186, 10, 39) ;*/
-    }
 
-    #container_main {
-        
-        .primera_parte{    
-            .precentacion {
-                
-                .precentacion_slogan {    
-                    img {     
-                    }
-
-                    div{
-                        
-                        span {
-                        }
-                    }
     
-                    div h2{
-                    }
-            
-                }
-
-                .precentacion_logotipo{
-                    
-                    &:hover{
-                        
-                    }
-
-                    img{
-                        
-                        &:hover{
-                            
-                        }
-                    }
-                }
-    
-            }
-
-            .plan_compra{
-                max-width: 100%;
-                flex-wrap: wrap;
-
-                div {
-                    width: 350px;
-                    span{
-                        
-                    }
-    
-                    p{
-                        
-                    }
-    
-                    a{
-    
-                        &:hover{
-                            
-                        }
-                    }
-                }
-            }
-        }
-
-        .correo{
-    
-            .correo_encabezado{
-    
-                span{
-                    
-                }
-            }
-    
-            .form_c{ /* contenedor formulario principal sin titulo  */
-                width: 80%;
-    
-                .logo_form{
-                    
-    
-                    img{
-                    }
-                }
-    
-                .correo_formulario{
-                    
-    
-                    .mensaje_form{
-    
-                        .textbox{
-                            
-    
-                            &:focus{
-                                
-                            }
-                        }
-                    }
-    
-                    div{
-    
-                        label{
-                            
-                        }
-    
-                        .dato_parrafo{
-                            
-    
-                            &:focus{
-                                
-                            }
-                        }
-                    }
-
-                    .tipo_Repo{
-    
-                        .check{
-                            
-    
-                            label{
-                                
-                            }
-                        }
-    
-                        p{
-                            
-                        }
-                    }
-    
-                    .enviar{
-                        
-                    }
-                }
-            }
-        }
-    }
 }
 
 /* medidas para dispositivos pequeños como celulares  y celulares antiguos */
@@ -1026,7 +894,9 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
 
         .buscador{
             width: 90%;
-            flex-direction: column;
+            max-width: 100%;
+            flex-wrap: nowrap;
+            //flex-direction: column;
             
     
             .buscador_form{
@@ -1161,37 +1031,39 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
             }
     
             #galeria{
-                background: #0f75e2;
-                width: 95%;
+                //background: #0f75e2;
+                width: 80%;
                 margin: 0 auto;
                 grid-template-columns: 100%;
-                grid-auto-rows: 250px;
-                row-gap: 10px;
     
                 .galeria_articulo{
                     width: 100%;
-                    img{
-                        
+                    .imgDiv_G{
+                        .img_Art{
+                            
+                            object-fit: fill;
+                        }
                     }
     
-                    div{
+                    #datos_art{
                         
     
-                        p{
-                            
+                        div{
+                            .nom_prod{
+                                
+                            }
+        
+                            .precio{
+                                
+                            }
                         }
     
-                        button{
-                            
+                        #comprar{
     
                             &:active{
                                 
                             }
                         }
-                    }
-    
-                    .nom_prod {
-                        
                     }
     
                     &:hover {

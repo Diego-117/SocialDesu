@@ -6,17 +6,17 @@ const productoMem =[
 ];
 
 const productoT = [
-    new Tienda('Albedo kimono', 3600, '1-2.png'),
-    new Tienda('Baki manga', 110, 'baki1.jpeg'),
-    new Tienda('Brunhilda', 350, 'camisa1.jpg'),
-    new Tienda('Erza scarlet', 9500, 'figura1.jpg'),
-    new Tienda('Ikaros', 9500, 'figura2.jpg'),
-    new Tienda('Jujutsu kaisen', 100, 'jujutsu1.jpg'),
-    new Tienda('Kimetsu box', 12000, 'kimetsu1.jpg'),
-    new Tienda('Madoka magica', 350, 'madoka1.jpg'),
-    new Tienda('Miku', 350, 'mikupeluche1.jpg'),
-    new Tienda('Pikachu', 300, 'pikachu1.webp'),
-    new Tienda('Quirby', 320, 'quirby.jpg')
+    new Tienda('albedo kimono', 3600, '1-2.png'),
+    new Tienda('baki manga', 110, 'baki1.jpeg'),
+    new Tienda('brunhilda camiseta', 350, 'camisa1.jpg'),
+    new Tienda('erza scarlet', 9500, 'figura1.jpg'),
+    new Tienda('ikaros', 9500, 'figura2.jpg'),
+    new Tienda('jujutsu kaisen', 100, 'jujutsu1.jpg'),
+    new Tienda('kimetsu box', 12000, 'kimetsu1.jpg'),
+    new Tienda('madoka magica', 350, 'madoka1.jpg'),
+    new Tienda('miku', 350, 'mikupeluche1.jpg'),
+    new Tienda('pikachu', 300, 'pikachu1.webp'),
+    new Tienda('quirby', 320, 'quirby.jpg')
 ];
 //TODO: arreglo carrito
 const carrito = [];
@@ -41,12 +41,6 @@ function cargarTienda(){
     //verificar carrito
     revisaCarrito()
 
-    //colorear carro icon_carro
-    let LTSCarrito1 = JSON.parse(localStorage.getItem('carritoLTS'));
-    //console.log(LTSCarrito1.length);
-    if (LTSCarrito1.length > 0) {
-        document.getElementById('icon_carro').style.backgroundColor = 'rgb(215, 0, 0)';
-    }
 };
 
 //crear objeto de galeria
@@ -54,11 +48,15 @@ function cargarTienda(){
 function objTienda(producto){
     let obj = `
     <div class="galeria_articulo">
-        <p class="nom_prod">${producto.nom}</p>
-        <img src="./img/galeria/${producto.ruta}" alt="productos">
-        <div>
-            <p>$${producto.precio}</p> 
+        <div id="datos_art">
+            <div>
+                <p class="nom_prod">${capitalizarPalabras(producto.nom)}</p>
+                <p class="precio">$${producto.precio}</p> 
+            </div>
             <button id="comprar" onclick="insertarCarrito(${producto.id})">+</button>
+        </div>
+        <div class="imgDiv_G">
+            <img class="img_Art" src="./img/galeria/${producto.ruta}" alt="productos">
         </div>
     </div>
     `;
@@ -128,7 +126,18 @@ function revisaCarrito(){
     document.getElementById('cantidadCarrito').innerHTML = LTSCarrito.length;
     document.getElementById('cantidadCarrito2').innerHTML = LTSCarrito.length;
 }
-//revisaCarrito();
+
+//cambia la primera letra en mayuscula
+function capitalizarPalabras( val ) {
+  
+    return val.toLowerCase()
+              .trim()
+              .split(' ')
+              .map( v => v[0].toUpperCase() + v.substr(1) )
+              .join(' ');  
+  }
+  
+  //console.log( capitalizarPalabras( 'Albedo kimono' ) );
 
 //crear platilla de objeto carrito para insertarla 
 
@@ -137,7 +146,7 @@ function carritoObj(e){
     <div id="card_car">
         <img src="./img/galeria/${e.ruta}" alt="productos">
         <div class="card_body">
-            <h3 class="title">${e.nom}</h3>
+            <h3 class="title">${capitalizarPalabras(e.nom)}</h3>
             <h4 class="card_subtitle ">Precio: $${e.precio}</h4>
             <p class="card-cant">Cantidad: ${e.cantidad}<div><button class="btn btn-secondary" onclick="agregarMas(${e.id})">+</button>|<button class="btn btn-secondary" onclick="agregarMenos(${e.id})">-</button></div></p>
         </div>
@@ -210,3 +219,32 @@ function eliminar(id){
     //verificar carrito
     revisaCarrito();
 }
+
+
+//buscador 
+
+let buscador = document.getElementById('enviar_busqueda');
+
+buscador.addEventListener('click', ()=>{
+        insertBusqueda();
+});
+
+function insertBusqueda(){
+    let dato = document.querySelector('#buscar').value;
+    console.log(dato)
+    const encontrado = productoT.filter(e => e.nom.includes(dato.toLowerCase()));
+    //FIXME: creamos variable para almacenar ingresos
+    let articulo = '';
+
+    if (dato !== '') {
+        //recorrer y guardar los ingresos
+        for (const row of encontrado) {
+            articulo += objTienda(row);
+        }
+        document.getElementById('galeria').innerHTML = articulo;
+    }else{
+        alert('ingresa algo');
+    }
+    
+    //console.log(encontrado);
+};

@@ -64,6 +64,7 @@ body{
         .redes_sociales{
             width: 150px;
             height: 50px;
+            margin-bottom: 5px;
 
             ul{
                 height: 100%;
@@ -80,21 +81,28 @@ body{
                     margin-left: 5px;
                     
                     a{
-                        background-color: #333;
+                        background-color: transparent;
                         border-radius: 50%;
                         width: 100%;
                         height: auto;
                         padding: 10px;
+                        border: 2px solid #fff;
+
+                        display: flex;
                         
                         svg{
                             width: 25px;
                             height: 25px;
-                            background-color: #fff;
+                            background-color: none;
                             border-radius: 50%;
                         }
 
                         .bi-whatsapp{
                             color: rgb(52, 174, 52);
+                        }
+
+                        &:hover{
+                            background-color: #fff;
                         }
                     }
                 }
@@ -119,7 +127,7 @@ body{
             margin-left: 20px;
 
             #btn_carrito{
-                background: purple;
+                background: rgb(158, 21, 158);
                 display: flex;
                 justify-content: center;
                 align-items: center;

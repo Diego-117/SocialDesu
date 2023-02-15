@@ -42,7 +42,8 @@ body {
         object-fit: cover; }
     #cabecera_principal .logotipo_principal .redes_sociales {
       width: 150px;
-      height: 50px; }
+      height: 50px;
+      margin-bottom: 5px; }
       #cabecera_principal .logotipo_principal .redes_sociales ul {
         height: 100%;
         display: flex;
@@ -56,18 +57,22 @@ body {
           text-align: center;
           margin-left: 5px; }
           #cabecera_principal .logotipo_principal .redes_sociales ul li a {
-            background-color: #333;
+            background-color: transparent;
             border-radius: 50%;
             width: 100%;
             height: auto;
-            padding: 10px; }
+            padding: 10px;
+            border: 2px solid #fff;
+            display: flex; }
             #cabecera_principal .logotipo_principal .redes_sociales ul li a svg {
               width: 25px;
               height: 25px;
-              background-color: #fff;
+              background-color: none;
               border-radius: 50%; }
             #cabecera_principal .logotipo_principal .redes_sociales ul li a .bi-whatsapp {
               color: #34ae34; }
+            #cabecera_principal .logotipo_principal .redes_sociales ul li a:hover {
+              background-color: #fff; }
   #cabecera_principal .menu_principal {
     width: 50%;
     height: 3em;
@@ -81,7 +86,7 @@ body {
       padding: 8px;
       margin-left: 20px; }
       #cabecera_principal .menu_principal li #btn_carrito {
-        background: purple;
+        background: #9e159e;
         display: flex;
         justify-content: center;
         align-items: center; }
@@ -574,28 +579,32 @@ body {
               background: rgba(101, 59, 221, 0.2); }
   .main_tienda .buscador {
     width: 50%;
-    min-height: 200px;
+    max-width: 50%;
+    height: 200px;
     margin: 50px auto;
-    border: 3px solid #333;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center; }
     .main_tienda .buscador .buscador_form {
-      border: 2px solid red;
-      display: flex; }
-    .main_tienda .buscador .carrito {
-      display: flex;
-      align-items: center;
-      margin: 0 5px;
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .main_tienda .buscador .carrito img {
-        width: 50px;
-        height: 50px;
-        cursor: pointer; }
+      width: 60%; }
+      .main_tienda .buscador .buscador_form #buscar {
+        width: 100%;
+        padding: 10px;
+        border: 3px solid #686767;
+        border-radius: 8%;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none; }
+        .main_tienda .buscador .buscador_form #buscar:focus {
+          border: 3px solid #d70000; }
+    .main_tienda .buscador #enviar_busqueda {
+      padding: 13px;
+      background-color: #9e159e;
+      border-radius: 6px;
+      color: #fff; }
+      .main_tienda .buscador #enviar_busqueda:hover {
+        padding: 1em; }
   .main_tienda .tienda_contenido {
     height: auto;
     margin-bottom: 100px;
@@ -707,47 +716,45 @@ body {
       padding: 5px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 250px;
-      gap: 20px;
+      grid-auto-rows: 350px;
+      column-gap: 20px;
+      row-gap: 20px;
       /*grid-template-rows: repeat(10, 1fr);*/ }
       .main_tienda .tienda_contenido #galeria .galeria_articulo {
-        position: relative;
-        border: 1px solid #dedddd;
-        overflow: hidden; }
-        .main_tienda .tienda_contenido #galeria .galeria_articulo img {
+        height: auto;
+        box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .main_tienda .tienda_contenido #galeria .galeria_articulo .imgDiv_G {
           width: 100%;
-          height: 100%;
-          object-fit: cover; }
-        .main_tienda .tienda_contenido #galeria .galeria_articulo div {
-          background-image: linear-gradient(to right, #ffffff, #dad8f7, #afb4f0, #7a93e9, #0f75e2);
+          height: 300px;
+          display: flex; }
+          .main_tienda .tienda_contenido #galeria .galeria_articulo .imgDiv_G .img_Art {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 2px solid #333335;
+            border-radius: 6%; }
+        .main_tienda .tienda_contenido #galeria .galeria_articulo #datos_art {
+          background-color: #f0f2f9;
           width: 100%;
-          color: black;
+          height: 50px;
           padding: 5px;
+          border-top: 2px solid rebeccapurple;
           display: flex;
-          justify-content: space-between;
-          position: absolute;
-          bottom: 0;
-          left: 0; }
-          .main_tienda .tienda_contenido #galeria .galeria_articulo div p {
-            margin-right: 5px;
+          justify-content: space-between; }
+          .main_tienda .tienda_contenido #galeria .galeria_articulo #datos_art div .nom_prod {
+            font-weight: bold;
+            margin-bottom: 10px; }
+          .main_tienda .tienda_contenido #galeria .galeria_articulo #datos_art div .precio {
             font-weight: 600;
-            margin: auto 5px; }
-          .main_tienda .tienda_contenido #galeria .galeria_articulo div button {
-            padding: 3px 4px;
+            margin-bottom: 0; }
+          .main_tienda .tienda_contenido #galeria .galeria_articulo #datos_art #comprar {
+            padding: 10px;
+            font-size: 1rem;
             margin-right: 5px;
             cursor: pointer; }
-            .main_tienda .tienda_contenido #galeria .galeria_articulo div button:active {
+            .main_tienda .tienda_contenido #galeria .galeria_articulo #datos_art #comprar:active {
               background-color: #0f75e2;
               color: #ffffff; }
-        .main_tienda .tienda_contenido #galeria .galeria_articulo .nom_prod {
-          width: auto;
-          font-weight: 600;
-          background-image: linear-gradient(to right, #ffffff, #dad8f7, #afb4f0, #7a93e9, #0f75e2);
-          padding: 5px;
-          border-radius: 10%;
-          position: absolute;
-          top: 10px;
-          left: 10px; }
         .main_tienda .tienda_contenido #galeria .galeria_articulo:hover {
           -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -1072,18 +1079,6 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
       width: 300px; } }
 
 /* Medidas para ipad y tablets */
-@media only screen and (max-width: 768px) {
-  * {
-    /*background: rgb(186, 10, 39) ;*/ }
-  #container_main .primera_parte .plan_compra {
-    max-width: 100%;
-    flex-wrap: wrap; }
-    #container_main .primera_parte .plan_compra div {
-      width: 350px; }
-  #container_main .correo .form_c {
-    /* contenedor formulario principal sin titulo  */
-    width: 80%; } }
-
 /* medidas para dispositivos pequeños como celulares  y celulares antiguos */
 @media only screen and (max-width: 480px) {
   * {
@@ -1348,7 +1343,8 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
     display: block; }
   .main_tienda .buscador {
     width: 90%;
-    flex-direction: column; }
+    max-width: 100%;
+    flex-wrap: nowrap; }
     .main_tienda .buscador .buscador_form {
       width: 100%; }
   .main_tienda .tienda_contenido .menu_galeria {
@@ -1375,14 +1371,13 @@ las medidas de pantallas as grandes a las mas pequeñas o viseversa*/
       text-align: center;
       margin-right: 10px; }
   .main_tienda .tienda_contenido #galeria {
-    background: #0f75e2;
-    width: 95%;
+    width: 80%;
     margin: 0 auto;
-    grid-template-columns: 100%;
-    grid-auto-rows: 250px;
-    row-gap: 10px; }
+    grid-template-columns: 100%; }
     .main_tienda .tienda_contenido #galeria .galeria_articulo {
-      width: 100%; } }
+      width: 100%; }
+      .main_tienda .tienda_contenido #galeria .galeria_articulo .imgDiv_G .img_Art {
+        object-fit: fill; } }
 
 /* para iniciar los estilos poner en ventana de comandos node: npm run watch-css 
 este comando d acuerdo al script que ingresamos en el package.json
