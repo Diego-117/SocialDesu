@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1a",
+        "nom": "streemer",
+        "tipo": "1a",
+        "costo": 2000,
+        "duracion": "un año"
+    },
+    {
+        "id": "2a",
+        "nom": "leector",
+        "tipo": "2a",
+        "costo": 2000,
+        "duracion": "un año"
+    },
+    {
+        "id": "3a",
+        "nom": "fan",
+        "tipo": "3a",
+        "costo": 2000,
+        "duracion": "un año"
+    }
+]

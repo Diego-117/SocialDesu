@@ -111,6 +111,9 @@
                 width: 300px;
                 border: 2px solid rgb(255, 255, 255);
                 padding: 10px;
+                display: flex;
+                flex-direction: column;
+                
 
                 span{
                     display: block;
@@ -127,18 +130,19 @@
                     
                 }
 
-                a{
-                    display: block;
-                    text-align: center;
-                    margin-top: 20px;
-                    text-decoration: none;
-                    color: rgb(255, 255, 255);
+                #memb1, #memb2, #memb3{
+                    background-color: #fff;
+                    padding: 10px 0;
+                    color: rgb(0, 0, 0);
+                    font-weight: 600;
+                    border-radius: 90px;
 
                     &:hover{
-                        color: rgb(11, 11, 11);
+                        color: rgb(73, 181, 253);
                         padding: 20px;
                         background: rgb(255, 255, 255);
                         border-radius: 6%;
+                        border-radius: 90px;
                     }
                 }
             }

@@ -20,8 +20,18 @@ const productoT = [
 ];
 //TODO: arreglo carrito
 const carrito = [];
-
-
+// recuperar informacion de 
+//consumo api local
+function apiMostrar(){
+    let membresias = [];
+    let url = ".././json/Membresias.json";
+    fetch(url)
+        .then(info => info.json())
+        .then(prod => prod.forEach(e => {
+            membresias.push(e);
+        }));
+    return membresias;
+};
 // cargar tienda
 function cargarTienda(){
     //FIXME: creamos variable para almacenar ingresos
@@ -67,12 +77,12 @@ function objTienda(producto){
 const insertarCarrito = id =>{
     let productos = JSON.parse(localStorage.getItem('carritoLTS'));
     //buscar objeto en el arreglo producto para el carrito 
-    let producto = productos[id-1]; //del array obtenido del localstorage
     let insert = {};
-    let prodLTS = productoT[id-1]; // del array de roductos
+    let prodLTS = productoT[id-1];
+    //console.log(prodLTS);  del array de roductos
     // buscar con sort si existe ya el producto en el carrito 
     let objExiste = productos.some(e => e.id === prodLTS.id);
-    console.log(objExiste);
+    //console.log(objExiste);
     if (objExiste) {
         //se le suma a la cantidad uno mas 
 
@@ -167,7 +177,6 @@ function agregarMas(id){
     
         if (element.id === id) {
             element.cantidad = element.cantidad + 1;
-            console.log(carrito);
         }
     
     });
@@ -224,11 +233,15 @@ function eliminar(id){
 //buscador 
 
 let buscador = document.getElementById('enviar_busqueda');
-
-buscador.addEventListener('click', ()=>{
-        insertBusqueda();
-});
-
+// no mostrar errores
+try {
+    buscador.addEventListener('click', ()=>{
+            insertBusqueda();
+    });
+} catch (error) {
+    //console.log(error.message());
+}
+//no mostrar errores
 function insertBusqueda(){
     let dato = document.querySelector('#buscar').value;
     console.log(dato)
@@ -248,3 +261,38 @@ function insertBusqueda(){
     
     //console.log(encontrado);
 };
+
+//TODO: agregar compra de membresia 
+let vip1 = document.querySelector("#memb1");
+let vip2 = document.querySelector("#memb2");
+let vip3 = document.querySelector("#memb3");
+
+try {
+    vip1.addEventListener('click', ()=>{comprarMembresia(1)});
+    vip2.addEventListener('click', ()=>{comprarMembresia(2)});
+    vip3.addEventListener('click', ()=>{comprarMembresia(3)});
+} catch (error) {
+    
+}
+
+function comprarMembresia(id){
+    //console.log('hola');
+    let productos = JSON.parse(localStorage.getItem('carritoLTS')); // se recupera carrito
+    let insert = {};
+    let membresias = new Array();
+    membresias.push(apiMostrar());
+    let obj = (membresia)=>{
+        for (const iterator of membresia) {
+            console.log(iterator)
+        }
+    };
+    let dato = obj(membresias);
+    console.log(dato);
+    //console.log(membresias);
+    //console.log(typeof(membresias));
+    //prodLTS();
+    console.log("asta aca");
+    /*let prodLTS = productoT[id-1];
+    let objExiste = productos.some(e => e.id === prodLTS.id);*/
+
+}

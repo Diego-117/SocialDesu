@@ -191,7 +191,9 @@ body {
     #container_main .primera_parte .plan_compra div {
       width: 300px;
       border: 2px solid white;
-      padding: 10px; }
+      padding: 10px;
+      display: flex;
+      flex-direction: column; }
       #container_main .primera_parte .plan_compra div span {
         display: block;
         text-align: center;
@@ -202,17 +204,18 @@ body {
       #container_main .primera_parte .plan_compra div p {
         text-align: justify;
         color: white; }
-      #container_main .primera_parte .plan_compra div a {
-        display: block;
-        text-align: center;
-        margin-top: 20px;
-        text-decoration: none;
-        color: white; }
-        #container_main .primera_parte .plan_compra div a:hover {
-          color: #0b0b0b;
+      #container_main .primera_parte .plan_compra div #memb1, #container_main .primera_parte .plan_compra div #memb2, #container_main .primera_parte .plan_compra div #memb3 {
+        background-color: #fff;
+        padding: 10px 0;
+        color: black;
+        font-weight: 600;
+        border-radius: 90px; }
+        #container_main .primera_parte .plan_compra div #memb1:hover, #container_main .primera_parte .plan_compra div #memb2:hover, #container_main .primera_parte .plan_compra div #memb3:hover {
+          color: #49b5fd;
           padding: 20px;
           background: white;
-          border-radius: 6%; }
+          border-radius: 6%;
+          border-radius: 90px; }
   #container_main .primera_parte .slide {
     display: none; }
   #container_main .segunda_parte .colaboradores {
