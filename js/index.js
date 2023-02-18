@@ -64,10 +64,13 @@ function objTienda(producto){
 
 // carrito
 const insertarCarrito = id =>{
+    //console.log(productoT);
+    //console.log(id);
     let productos = JSON.parse(localStorage.getItem('carritoLTS'));
     //buscar objeto en el arreglo producto para el carrito 
     let insert = {};
     let prodLTS = productoT[id-1];
+    //console.log(prodLTS);
     //console.log(prodLTS);  del array de roductos
     // buscar con sort si existe ya el producto en el carrito 
     let objExiste = productos.some(e => e.id === prodLTS.id);
@@ -79,7 +82,7 @@ const insertarCarrito = id =>{
     
             if (element.id === id) {
                 element.cantidad = element.cantidad + 1;
-                console.log(carrito);
+                //console.log(carrito);
             }
         
         });
@@ -208,9 +211,9 @@ function agregarMenos(id){
             
             if (element.cantidad >= 1) {
                 element.cantidad = element.cantidad - 1;
-                console.log(carrito);
+                //console.log(carrito);
             }else if(element.cantidad === 0){
-                console.log('elimina');
+                //console.log('elimina');
                 eliminar(id);
             }
         }
@@ -231,10 +234,10 @@ function eliminar(id){
     const LTSCarro = JSON.parse(localStorage.getItem('carritoLTS'));
 
     let index = LTSCarro.findIndex(el=> el.id == id);
-    console.log(index);
+    //console.log(index);
     //lo eliminamos
     LTSCarro.splice(index, 1);
-    console.log(LTSCarro);
+    //console.log(LTSCarro);
     // regresamos el arreglo al localstorage
     localStorage.setItem('carritoLTS', JSON.stringify(LTSCarro)); //insertamos en el local el carrito modificado
     //verificar carrito
@@ -256,7 +259,7 @@ try {
 //no mostrar errores
 function insertBusqueda(){
     let dato = document.querySelector('#buscar').value;
-    console.log(dato)
+    //console.log(dato)
     const encontrado = productoT.filter(e => e.nom.includes(dato.toLowerCase()));
     //FIXME: creamos variable para almacenar ingresos
     let articulo = '';
@@ -325,12 +328,12 @@ function comprarMembresia(array, ide){
     let obj = membresia.find(elemento => elemento.id === ide);
     let {id, nom, tipo, precio, duracion } = obj;
     const ruta = "streemer1.png";
-    console.log(precio);
+    //console.log(precio);
     //insertamos en el localstorage
     //recuperamos carrito localstorage
     let LTSCarrito = JSON.parse(localStorage.getItem('carritoLTS'));
     let objExist = LTSCarrito.some(e => e.id === ide);
-    console.log(objExist);
+    //console.log(objExist);
     //insertar en el carrito 
     if (objExist) {
         alert('La membresia ya a sido agregada al carrito, dirijete a la tienda para visualisarla en el carrito');
@@ -355,6 +358,8 @@ function verifica_seleccion(check){
 // funcion de filtrados
 
 function fltros(tipo){
+    const copiArreglo = [...productoT];
+    //console.log(copiArreglo);
     let objetos = '';
 
     switch (tipo) {
@@ -371,7 +376,7 @@ function fltros(tipo){
             objetos = productoT.filter(e=> e.precio > 10000) ;
         break;
         case 'menor-mayor':
-            objetos = productoT.sort((a,b) => {
+            objetos = copiArreglo.sort((a,b) => {
                 if (a.precio === b.precio) {
                     return 0;
                 }
@@ -383,7 +388,7 @@ function fltros(tipo){
             });
         break;
         case 'mayor-menor':
-            objetos = productoT.sort((a,b) => {
+            objetos = copiArreglo.sort((a,b) => {
                 if (a.precio === b.precio) {
                     return 0;
                 }
