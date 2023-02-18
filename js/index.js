@@ -20,18 +20,7 @@ const productoT = [
 ];
 //TODO: arreglo carrito
 const carrito = [];
-// recuperar informacion de 
-//consumo api local
-function apiMostrar(){
-    let membresias = [];
-    let url = ".././json/Membresias.json";
-    fetch(url)
-        .then(info => info.json())
-        .then(prod => prod.forEach(e => {
-            membresias.push(e);
-        }));
-    return membresias;
-};
+
 // cargar tienda
 function cargarTienda(){
     //FIXME: creamos variable para almacenar ingresos
@@ -131,10 +120,14 @@ function revisaCarrito(){
     });
 
     //insertamos en el apartado carrito
-    document.getElementById('car_dv').innerHTML = objCont;
-    //configuramos la cantidad de objetos en el carrito
-    document.getElementById('cantidadCarrito').innerHTML = LTSCarrito.length;
-    document.getElementById('cantidadCarrito2').innerHTML = LTSCarrito.length;
+    try {
+        document.getElementById('car_dv').innerHTML = objCont;
+        //configuramos la cantidad de objetos en el carrito
+        document.getElementById('cantidadCarrito').innerHTML = LTSCarrito.length;
+        document.getElementById('cantidadCarrito2').innerHTML = LTSCarrito.length;
+    } catch (error) {
+        //console.log(error.message());
+    }
 }
 
 //cambia la primera letra en mayuscula
@@ -152,21 +145,40 @@ function capitalizarPalabras( val ) {
 //crear platilla de objeto carrito para insertarla 
 
 function carritoObj(e){
-    let objCar = `
-    <div id="card_car">
-        <img src="./img/galeria/${e.ruta}" alt="productos">
-        <div class="card_body">
-            <h3 class="title">${capitalizarPalabras(e.nom)}</h3>
-            <h4 class="card_subtitle ">Precio: $${e.precio}</h4>
-            <p class="card-cant">Cantidad: ${e.cantidad}<div><button class="btn btn-secondary" onclick="agregarMas(${e.id})">+</button>|<button class="btn btn-secondary" onclick="agregarMenos(${e.id})">-</button></div></p>
-        </div>
-        <div class="buttons">
-            <button class="btn btn-primary" onclick="editarArt(${e.id})">Editar</button>
-            <button class="btn btn-primary" onclick="eliminar(${e.id})">Eliminar articulo</button>
-        </div>
-    </div>
-    <hr>
-    `;
+    let objCar = "";
+    if (typeof e.id !== "string") {
+         objCar = `
+            <div id="card_car">
+                <img src="./img/galeria/${e.ruta}" alt="productos">
+                <div class="card_body">
+                    <h3 class="title">${capitalizarPalabras(e.nom)}</h3>
+                    <h4 class="card_subtitle ">Precio: $${e.precio}</h4>
+                    <p class="card-cant">Cantidad: ${e.cantidad}<div><button class="btn btn-secondary" onclick="agregarMas(${e.id})">+</button>|<button class="btn btn-secondary" onclick="agregarMenos(${e.id})">-</button></div></p>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="editarArt(${e.id})">Editar</button>
+                    <button class="btn btn-primary" onclick="eliminar(${e.id})">Eliminar articulo</button>
+                </div>
+            </div>
+            <hr>
+            `;
+    }else{
+        objCar = `
+            <div id="card_car">
+                <img src="./img/galeria/${e.ruta}" alt="productos">
+                <div class="card_body">
+                    <h3 class="title">${capitalizarPalabras(e.nom)}</h3>
+                    <h4 class="card_subtitle ">Precio: $${e.precio}</h4>
+                    <p class="card-cant">Cantidad: ${e.cantidad}<div><button class="btn btn-secondary" onclick="agregarMas('${e.id}')">+</button>|<button class="btn btn-secondary" onclick="agregarMenos('${e.id}')">-</button></div></p>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary" onclick="editarArt('${e.id}')">Editar</button>
+                    <button class="btn btn-primary" onclick="eliminar('${e.id}')">Eliminar articulo</button>
+                </div>
+            </div>
+            <hr>
+            `;
+    }
   return objCar;
 }
 
@@ -218,7 +230,7 @@ function eliminar(id){
     //localsotorage
     const LTSCarro = JSON.parse(localStorage.getItem('carritoLTS'));
 
-    let index = LTSCarro.findIndex(el=> el.id === id);
+    let index = LTSCarro.findIndex(el=> el.id == id);
     console.log(index);
     //lo eliminamos
     LTSCarro.splice(index, 1);
@@ -268,31 +280,138 @@ let vip2 = document.querySelector("#memb2");
 let vip3 = document.querySelector("#memb3");
 
 try {
-    vip1.addEventListener('click', ()=>{comprarMembresia(1)});
-    vip2.addEventListener('click', ()=>{comprarMembresia(2)});
-    vip3.addEventListener('click', ()=>{comprarMembresia(3)});
+    vip1.addEventListener('click', ()=>{
+
+        //fetch 
+        let url = "./json/Membresias.json";
+        //fetch
+        fetch(url)
+        .then(response => response.json())
+        .then(response => comprarMembresia(response, '1a'))
+        //.catch(err => console.error(err));
+        //fin
+    });
+    vip2.addEventListener('click', ()=>{
+
+        //fetch 
+        let url = "./json/Membresias.json";
+        //fetch
+        fetch(url)
+        .then(response => response.json())
+        .then(response => comprarMembresia(response, '3a'))
+        //.catch(err => console.error(err));
+        //fin
+    });
+    vip3.addEventListener('click', ()=>{
+
+        //fetch 
+        let url = "./json/Membresias.json";
+        //fetch
+        fetch(url)
+        .then(response => response.json())
+        .then(response => comprarMembresia(response, '2a'))
+        //.catch(err => console.error(err));
+        //fin
+    });
 } catch (error) {
-    
+    //console.log(error.message());
 }
 
-function comprarMembresia(id){
+function comprarMembresia(array, ide){
     //console.log('hola');
     let productos = JSON.parse(localStorage.getItem('carritoLTS')); // se recupera carrito
     let insert = {};
-    let membresias = new Array();
-    membresias.push(apiMostrar());
-    let obj = (membresia)=>{
-        for (const iterator of membresia) {
-            console.log(iterator)
-        }
-    };
-    let dato = obj(membresias);
-    console.log(dato);
-    //console.log(membresias);
-    //console.log(typeof(membresias));
-    //prodLTS();
-    console.log("asta aca");
-    /*let prodLTS = productoT[id-1];
-    let objExiste = productos.some(e => e.id === prodLTS.id);*/
+    let membresia = array;
+    let obj = membresia.find(elemento => elemento.id === ide);
+    let {id, nom, tipo, precio, duracion } = obj;
+    const ruta = "streemer1.png";
+    console.log(precio);
+    //insertamos en el localstorage
+    //recuperamos carrito localstorage
+    let LTSCarrito = JSON.parse(localStorage.getItem('carritoLTS'));
+    let objExist = LTSCarrito.some(e => e.id === ide);
+    console.log(objExist);
+    //insertar en el carrito 
+    if (objExist) {
+        alert('La membresia ya a sido agregada al carrito, dirijete a la tienda para visualisarla en el carrito');
+    }else{
+        insert = {id, nom, precio, ruta, cantidad: 1, tipo, duracion};
+        LTSCarrito.push(insert);
+        localStorage.setItem('carritoLTS', JSON.stringify(LTSCarrito));
+        alert('ingresa a la tienda y revisa tu compra para pagar y poder reclamar tu membresia'); 
+    }
+
+    //verificar carrito
+    revisaCarrito();
+}
+
+// funcion checar checkbox
+function verifica_seleccion(check){
+    if(!check.checked){
+        check.checked=1;
+    }
+}
+
+// funcion de filtrados
+
+function fltros(tipo){
+    let objetos = '';
+
+    switch (tipo) {
+        case '500-900':
+            objetos = productoT.filter(e=> e.precio >= 500 && e.precio <= 900) ;
+        break;
+        case '1000-3000':
+            objetos = productoT.filter(e=> e.precio >= 1000 && e.precio <= 3000) ;
+        break;
+        case '5000-10000':
+            objetos = productoT.filter(e=> e.precio >= 5000 && e.precio <= 10000) ;
+        break;
+        case '10000':
+            objetos = productoT.filter(e=> e.precio > 10000) ;
+        break;
+        case 'menor-mayor':
+            objetos = productoT.sort((a,b) => {
+                if (a.precio === b.precio) {
+                    return 0;
+                }
+            
+                if (a.precio < b.precio) { //FIXME: de menor a mayor
+                    return -1;
+                }
+                return 1;
+            });
+        break;
+        case 'mayor-menor':
+            objetos = productoT.sort((a,b) => {
+                if (a.precio === b.precio) {
+                    return 0;
+                }
+            
+                if (b.precio < a.precio) { //FIXME: mayor a menor
+                    return -1;
+                }
+                return 1;
+            });
+        break;
+        default:
+            alert('no se pudo hacer el filtrado');
+            break;
+    }
+
+    //cargamos el filtro
+    let tienda = '';
+    //recorrer y guardar los ingresos
+    for (const row of objetos) {
+        tienda += objTienda(row);
+    }
+    document.getElementById('galeria').innerHTML = tienda;
 
 }
+
+// capturamos el evento y ejecutamos la funcion
+/*let eventFilter = document.querySelector('#exampleCheck1');
+
+eventFilter.addEventListener('click', () =>{
+    fltros(tipo)
+});*/
